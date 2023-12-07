@@ -6,6 +6,8 @@ import Onboardscreen from "../screen/Onboardscreen";
 import Loginscreen from "../screen/Loginscreen";
 import Signupscreen from "../screen/Signupscreen";
 import ForgetPassword from "../screen/ForgetPassword";
+import Transferscreen from "../screen/Transferscreen";
+import Bottomnavigation from "./Bottomnavigation";
 const Stack = createStackNavigator()
 export default function Navigation(){
     const onboard = useSelector((state)=> state.onboard)
@@ -27,7 +29,9 @@ export default function Navigation(){
                 </>
                 ):(
                     <>
-                    <Stack.Screen/>
+                    <Stack.Screen  name='transfer' component={Transferscreen}/>
+                    <Stack.Screen />
+                    <Stack.Screen />
                     </>
                 )
             }
