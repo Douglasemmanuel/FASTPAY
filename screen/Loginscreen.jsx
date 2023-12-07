@@ -51,6 +51,7 @@ const [passwordError , setPasswordError] = useState('')
         {/* <Button titile='Sign In' onPress={onSignIn} /> */}
 
         <Text style={{textAlign:'center' , marginTop:40}}>Don't have an account? <Text style={{color:'blue'}} onPress={move}>Sign Up</Text></Text>
+        <Text style={{textAlign:'center' , marginTop:40}}>Forgot your password? <Text style={{color:'blue'}} >Rest now</Text></Text>
           </View>
           </TouchableWithoutFeedback>
         </KeyboardAvoidingView>

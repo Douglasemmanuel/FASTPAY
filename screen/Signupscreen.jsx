@@ -7,6 +7,11 @@ import { useNavigation } from '@react-navigation/native'
 import { KeyboardAvoidingView } from 'react-native'
 import { TouchableWithoutFeedback } from 'react-native'
 import { Keyboard } from 'react-native'
+import Input from '../components/Input'
+import Button from "../components/Button"
+import Tittle from "../components/Tittle"
+import { Keyboard } from 'react-native'
+import { useState } from 'react'
 const Signupscreen = () => {
   const navigation = useNavigation()
     //to hide the header on the navigation tab
