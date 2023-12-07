@@ -5,6 +5,7 @@ import { useSelector , useDispatch } from 'react-redux'
 import  setOnboardingStatus from '../actions/Onboardaction'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import Onboarding from 'react-native-onboarding-swiper'
+import { useLayoutEffect } from 'react'
 
 const Dots = ({selected}) => {
   let backgroundColor;
@@ -57,46 +58,50 @@ const Onboardscreen = ({navigation}) => {
 
     // Dispatch action to update onboarding status in Redux state
     dispatch(setOnboardingStatus(true));
-    navigation.replace("login")
+    navigation.replace("signup2")
   }
+  useLayoutEffect(()=>{
+    navigation.setOptions({
+        headerShown:false
+    })
+},[])
   return (
-   <SafeAreaView>
-    <Onboarding
+
+   <Onboarding
       SkipButtonComponent={Skip}
       NextButtonComponent={Next}
       DoneButtonComponent={Done}
       DotComponent={Dots}
-      onSkip={() => navigation.replace("login")}
+      onSkip={() => navigation.replace("signup")}
+      
       // onDone={()=> handleCompleteOnboarding()}
       onDone={ handleCompleteOnboarding}
       pages={[
+        
         {
-          backgroundColor: '#a6e4d0',
-          image: <Image source={require('../images/manwithcard.jpg')}  style={styles.image}/>,
+          backgroundColor: '#e9bcbe',
+          image: <Image source={require('../images/manwithcard.jpg')}  style={{ marginLeft:50}}/>,
+          title: 'Fast Transactions',
+          // subtitle: 'A New Way To Connect With The World',
+        },
+        {
+          backgroundColor: '#e9bcbe',
+          image: <Image source={require('../images/girltravel.jpg')}   style={{ marginLeft:200}} />,
+          
           title: 'Connect to the World',
-          subtitle: 'A New Way To Connect With The World',
+          // subtitle: 'Share Your Thoughts With Similar Kind of People',
         },
-        {
-          backgroundColor: '#fdeb93',
-          image: <Image source={require('../images/girltravel.jpg')} style={styles.image} />,
-          title: 'Share Your Favorites',
-          subtitle: 'Share Your Thoughts With Similar Kind of People',
-        },
+        
         {
           backgroundColor: '#e9bcbe',
-          image: <Image source={require('../images/girlsmile.jpg')}  style={styles.image}/>,
-          title: 'Become The Star',
-          subtitle: "Let The Spot Light Capture You",
+          image: <Image source={require('../images/mansmile.jpg')}   resizeMode="contain"  style={{width:1000 , marginLeft:200}} />,
+          title: 'Sign up Now',
+          // subtitle: "Let The Spot Light Capture You",
         },
-        {
-          backgroundColor: '#e9bcbe',
-          image: <Image source={require('../images/mansmile.jpg')}  style={styles.image}/>,
-          title: 'Become The Star',
-          subtitle: "Let The Spot Light Capture You",
-        },
+       
       ]}
     />
-   </SafeAreaView>
+  
   )
 }
 
@@ -108,7 +113,7 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
     borderRadius:50,
-    overflow:hidden,
+    // overflow:hidden,
     // resizeMode: 'cover',  // Ensure the image covers the entire circle
   },
 })

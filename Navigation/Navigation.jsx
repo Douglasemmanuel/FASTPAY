@@ -1,20 +1,22 @@
 import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from '@react-navigation/native-stack'
+// import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import { createStackNavigator } from '@react-navigation/stack';
 import { useSelector } from "react-redux";
 import Onboardscreen from "../screen/Onboardscreen";
 import Loginscreen from "../screen/Loginscreen";
 import Signupscreen from "../screen/Signupscreen";
-const Stack = createNativeStackNavigator()
+const Stack = createStackNavigator()
 export default function Navigation(){
     const onboard = useSelector((state)=> state.onboard)
     const authenticated = useSelector((state)=> state.authenticated)
     return (
         <NavigationContainer>
-            <StatusBar barstyle='dark-content'/>
+            {/* <StatusBar barstyle='dark-content'/> */}
             <Stack.Navigator>
                 {!onboard?(
                    <>
                     <Stack.Screen  name='onboard' component={Onboardscreen}/>
+                    
                    </> 
                 ):!authenticated? (
                 <>
