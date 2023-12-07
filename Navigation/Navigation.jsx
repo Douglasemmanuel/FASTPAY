@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import Onboardscreen from "../screen/Onboardscreen";
 import Loginscreen from "../screen/Loginscreen";
 import Signupscreen from "../screen/Signupscreen";
+import ForgetPassword from "../screen/ForgetPassword";
 const Stack = createStackNavigator()
 export default function Navigation(){
     const onboard = useSelector((state)=> state.onboard)
@@ -22,6 +23,7 @@ export default function Navigation(){
                 <>
                 <Stack.Screen name='login' component={Loginscreen}/>
                 <Stack.Screen name='signup' component={Signupscreen}/>
+                <Stack.Screen name='forget' component={ForgetPassword}/>
                 </>
                 ):(
                     <>

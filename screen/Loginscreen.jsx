@@ -48,10 +48,11 @@ const [passwordError , setPasswordError] = useState('')
         secureTextEntry={true}
         />
         {/* <Input/> */}
-        {/* <Button titile='Sign In' onPress={onSignIn} /> */}
+        <Button title='Sign In'/>
+     
 
         <Text style={{textAlign:'center' , marginTop:40}}>Don't have an account? <Text style={{color:'blue'}} onPress={move}>Sign Up</Text></Text>
-        <Text style={{textAlign:'center' , marginTop:40}}>Forgot your password? <Text style={{color:'blue'}} >Rest now</Text></Text>
+        <Text style={{textAlign:'center' , marginTop:40}}>Forgot your password? <Text style={{color:'blue'}}  onPress={()=> navigation.navigate('forget')}>Rest now</Text></Text>
           </View>
           </TouchableWithoutFeedback>
         </KeyboardAvoidingView>
