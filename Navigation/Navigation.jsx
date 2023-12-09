@@ -27,7 +27,7 @@ export default function Navigation(){
                 <Stack.Screen name='signup' component={Signupscreen}/>
                 <Stack.Screen name='forget' component={ForgetPassword}/>
                 <Stack.Screen  name='transfer' component={Transferscreen}/>
-                <Stack.Screen  name='home' component={Bottomnavigation}/>
+                <Stack.Screen  name='home' component={Bottomnavigation}  options={{headerShown:false}}/>
                 </>
                 ):(
                     <>

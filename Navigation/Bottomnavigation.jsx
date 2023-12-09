@@ -4,8 +4,8 @@ import Homescreen from '../screen/Homescreen'
 import Transferscreen from '../screen/Transferscreen'
 import Historyscreen from '../screen/Historyscreen'
 import Profilescreen from '../screen/Profilescreen'
-import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs'
 const Tab = createMaterialBottomTabNavigator();
 const Bottomnavigation = () => {
   return (
@@ -21,7 +21,7 @@ const Bottomnavigation = () => {
       name="home" 
       component={Homescreen}
       options={{
-        tabBarLabel: 'home',
+        tabBarLabel: 'Home',
         tabBarIcon: ({ color }) => (
           <MaterialCommunityIcons name="home" color={color} size={26} />
         ),
@@ -43,7 +43,7 @@ const Bottomnavigation = () => {
       name="history" 
       component={Historyscreen}
       options={{
-        tabBarLabel: 'Help',
+        tabBarLabel: 'History',
         tabBarIcon: ({ color }) => (
           <MaterialCommunityIcons name="help-box" color={color} size={26} />
         ),
@@ -52,7 +52,7 @@ const Bottomnavigation = () => {
        <Tab.Screen 
       name="profile" 
       // options={{ headerShown: false }}
-      component={ProfileScreen}
+      component={Profilescreen}
       options={{
         tabBarLabel: 'Profile',
         tabBarIcon: ({ color }) => (

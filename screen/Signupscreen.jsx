@@ -77,7 +77,7 @@ const Signupscreen = () => {
             />
              <Button title='Sign Up'/>
 
-{/* <Text style={{textAlign:'center' , marginTop:40}}>Already have an account?<Text style={{color:'blue'}} onPress={()=>navigation.goBack()}> Sign In</Text></Text> */}
+<Text style={{textAlign:'center' , marginTop:40}}>Already have an account?<Text style={{color:'blue'}} onPress={()=>navigation.goBack()}> Sign In</Text></Text>
         </View>
         </TouchableWithoutFeedback>
       </KeyboardAvoidingView>
