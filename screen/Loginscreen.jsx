@@ -22,6 +22,9 @@ const Loginscreen = () => {
  function move(){
   navigation.navigate('signup')
 }
+function signin(){
+  navigation.navigate('home')
+}
 const [email , setEmail] = useState('')
 const [password , setPassword] = useState('')
 const [emailError , setEmailError] = useState('')
@@ -48,7 +51,7 @@ const [passwordError , setPasswordError] = useState('')
         secureTextEntry={true}
         />
         {/* <Input/> */}
-        <Button title='Sign In'/>
+        <Button title='Sign In' onPress={signin}/>
      
 
         <Text style={{textAlign:'center' , marginTop:40}}>Don't have an account? <Text style={{color:'blue'}} onPress={move}>Sign Up</Text></Text>

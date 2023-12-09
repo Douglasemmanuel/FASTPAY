@@ -37,7 +37,7 @@ const Signupscreen = () => {
       <KeyboardAvoidingView behaviour='height' style={{flex:1}}>
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <View style={{flex:1 , justifyContent:'center' , paddingHorizontal:20 }}>
-        <Text style={{textAlign:'center' , marginBottom:24 , fontSize:36 , fontWeight:'bold'}}>Sign Up</Text>
+        <Text style={{textAlign:'center' , marginBottom:24 , fontSize:36 , fontWeight:'bold'}}>Create an account</Text>
         <Input
              title='Email'
              value={email}
@@ -77,7 +77,7 @@ const Signupscreen = () => {
             />
              <Button title='Sign Up'/>
 
-<Text style={{textAlign:'center' , marginTop:40}}>Already have an account?<Text style={{color:'blue'}} onPress={()=>navigation.goBack()}> Sign In</Text></Text>
+{/* <Text style={{textAlign:'center' , marginTop:40}}>Already have an account?<Text style={{color:'blue'}} onPress={()=>navigation.goBack()}> Sign In</Text></Text> */}
         </View>
         </TouchableWithoutFeedback>
       </KeyboardAvoidingView>
