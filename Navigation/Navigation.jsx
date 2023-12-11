@@ -36,6 +36,7 @@ export default function Navigation(){
                 </>
                 ):(
                     <>
+                     <Stack.Screen  name='entrypin' component={Entrypinscreen}/>
                     <Stack.Screen name='intro' component={Splashscreen} />
                     {/* <Stack.Screen  name='transfer' component={Transferscreen}/>
                     <Stack.Screen  name='home' component={Bottomnavigation}/> */}
