@@ -8,6 +8,7 @@ import Signupscreen from "../screen/Signupscreen";
 import ForgetPassword from "../screen/ForgetPassword";
 import Transferscreen from "../screen/Transferscreen";
 import Bottomnavigation from "./Bottomnavigation";
+import Splashscreen from "../screen/Splashscreen";
 const Stack = createStackNavigator()
 export default function Navigation(){
     const onboard = useSelector((state)=> state.onboard)
@@ -15,10 +16,11 @@ export default function Navigation(){
     return (
         <NavigationContainer>
             {/* <StatusBar barstyle='dark-content'/> */}
-            <Stack.Navigator>
+            <Stack.Navigator initialRouteName='intro'  screenOptions={{ headerStyle: { backgroundColor: 'white' }, headerTintColor: 'black' }}>
                 {!onboard?(
                    <>
                     <Stack.Screen  name='onboard' component={Onboardscreen}/>
+                    <Stack.Screen name='intro' component={Splashscreen} />
                     
                    </> 
                 ):!authenticated? (
@@ -28,9 +30,11 @@ export default function Navigation(){
                 <Stack.Screen name='forget' component={ForgetPassword}/>
                 <Stack.Screen  name='transfer' component={Transferscreen}/>
                 <Stack.Screen  name='home' component={Bottomnavigation}  options={{headerShown:false}}/>
+                <Stack.Screen name='intro' component={Splashscreen} />
                 </>
                 ):(
                     <>
+                    <Stack.Screen name='intro' component={Splashscreen} />
                     {/* <Stack.Screen  name='transfer' component={Transferscreen}/>
                     <Stack.Screen  name='home' component={Bottomnavigation}/> */}
                     <Stack.Screen />

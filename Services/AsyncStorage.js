@@ -16,7 +16,7 @@ export const getToken = async(key)=>{
             return JSON.parse(data)
         }
     }catch(error){
-        console.log('secure.get:', error)
+        console.log('token', error)
     }
 }
 
