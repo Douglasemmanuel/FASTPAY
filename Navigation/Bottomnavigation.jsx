@@ -4,8 +4,10 @@ import Homescreen from '../screen/Homescreen'
 import Transferscreen from '../screen/Transferscreen'
 import Historyscreen from '../screen/Historyscreen'
 import Profilescreen from '../screen/Profilescreen'
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+// import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs'
+import Icon from 'react-native-vector-icons/Ionicons'
 const Tab = createMaterialBottomTabNavigator();
 const Bottomnavigation = () => {
   return (
@@ -13,7 +15,13 @@ const Bottomnavigation = () => {
    initialRouteName="home"
     activeColor="#FF4433"
     inactiveColor="black"
+    // activeTintColor
+  
     barStyle={{ backgroundColor: 'white' }}
+    tabBarOptions={{
+       activeTintColor:'blue',
+       inactiveTintColor:'gray',
+    }}
     // onTabLongPress={{backgroundColor:'white'}}
     ScreenOptions={{ headerShown: false }}
    >
@@ -23,7 +31,8 @@ const Bottomnavigation = () => {
       options={{
         tabBarLabel: 'Home',
         tabBarIcon: ({ color }) => (
-          <MaterialCommunityIcons name="home" color={color} size={26} />
+          // <MaterialCommunityIcons name="home" color={color} size={26} />
+          <Icon name="home" color={color} size={26} />
         ),
       }}
       />
@@ -34,8 +43,10 @@ const Bottomnavigation = () => {
       options={{
         tabBarLabel: 'Transfer',
         tabBarIcon: ({ color }) => (
-          <MaterialCommunityIcons name="account" color={color} size={26} />
+          // <MaterialCommunityIcons name="account" color={color} size={26} />
+          <Icon name="home" color={color} size={26} />
         ),
+        tabBarColor:"#FF4433",
         headerShown: false
       }}
       />
@@ -45,8 +56,10 @@ const Bottomnavigation = () => {
       options={{
         tabBarLabel: 'History',
         tabBarIcon: ({ color }) => (
-          <MaterialCommunityIcons name="help-box" color={color} size={26} />
+          // <MaterialCommunityIcons name="help-box" color={color} size={26} />
+           <Icon name="help" color={color} size={26} />
         ),
+        tabBarColor:"#FF4433"
       }}
       />
        <Tab.Screen 
@@ -55,10 +68,12 @@ const Bottomnavigation = () => {
       component={Profilescreen}
       options={{
         tabBarLabel: 'Profile',
-        tabBarIcon: ({ color }) => (
-          <MaterialCommunityIcons name="account" color={color} size={26} />
+        tabBarIcon: ({ color , }) => (
+          // <MaterialCommunityIcons name="account" color={color} size={26} />
+          <Icon name="person" color={color} size={26} />
         ),
-        headerShown: false
+        tabBarColor:"#FF4433"
+        // headerShown: false
       }}
       />
    </Tab.Navigator>
