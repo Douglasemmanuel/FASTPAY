@@ -4,11 +4,13 @@ import Homescreen from '../screen/Homescreen'
 import Transferscreen from '../screen/Transferscreen'
 import Historyscreen from '../screen/Historyscreen'
 import Profilescreen from '../screen/Profilescreen'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 // import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs'
+// import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs'
 import Icon from 'react-native-vector-icons/Ionicons'
-const Tab = createMaterialBottomTabNavigator();
+// const Tab = createMaterialBottomTabNavigator();
+const Tab = createBottomTabNavigator();
 const Bottomnavigation = () => {
   return (
    <Tab.Navigator
