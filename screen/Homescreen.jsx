@@ -6,6 +6,7 @@ import { useNavigation } from '@react-navigation/native'
 import AccountBalance from '../components/AccountBalance'
 import AccountDetails from '../components/AccountDetails'
 import Historyscreen from './Historyscreen'
+import Userinfo from '../components/Userinfo'
 const Homescreen = () => {
   const navigation = useNavigation()
   useLayoutEffect(()=>{
@@ -16,6 +17,7 @@ const Homescreen = () => {
   return (
    <SafeAreaView>
      <View>
+      <Userinfo/>
       <Text>Homescreen</Text>
     </View>
    </SafeAreaView>
