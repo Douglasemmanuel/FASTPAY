@@ -12,10 +12,10 @@ const Userinfo = () => {
             const currentDate = new Date();
             const currentHour = currentDate.getHours();
 
-            //define the evening time range
+            //define the morning time range
             const morningStarHour = 0;
             const morningEndHour = 12;
-            //check if the current hour is within the evening range
+            //check if the current hour is within the morning range
             const isMorningTime = currentHour >= morningStarHour && currentHour <=  morningEndHour;
 
             //update the state based on the result
@@ -26,10 +26,10 @@ const Userinfo = () => {
             const currentDate = new Date();
             const currentHour = currentDate.getHours();
 
-            //define the evening time range
+            //define the afternoon time range
             const afternoonStarHour = 12;
             const afternoonEndHour = 17;
-            //check if the current hour is within the evening range
+            //check if the current hour is within the afternoon range
             const isAfternoonTime = currentHour >= afternoonStarHour && currentHour <=  afternoonEndHour;
 
             //update the state based on the result
