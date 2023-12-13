@@ -7,6 +7,7 @@ import AccountBalance from '../components/AccountBalance'
 import AccountDetails from '../components/AccountDetails'
 import Historyscreen from './Historyscreen'
 import Userinfo from '../components/Userinfo'
+import UserAccount from '../components/UserAccount'
 const Homescreen = () => {
   const navigation = useNavigation()
   useLayoutEffect(()=>{

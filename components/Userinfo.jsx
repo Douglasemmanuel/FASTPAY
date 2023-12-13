@@ -56,7 +56,7 @@ const Userinfo = () => {
   return (
     <SafeAreaView>
     <View>
-      <Text> Hello Doggie</Text>
+      <Text style={styles.text}> Hello Doggie</Text>
       <View>
         {isMorning?(
         <Morning/>
@@ -74,17 +74,17 @@ const Userinfo = () => {
 }
 const Morning = ()=>{
     return (
-        <Text style={styles.text}>Good morning</Text>
+        <Text style={styles.text1}>Good morning,Happy new day.</Text>
     )
 }
 const Afternoon = ()=>{
     return (
-        <Text style={styles.text}>Good Afternoon</Text>
+        <Text style={styles.text1}>Good Afternoon</Text>
     )
 }
 const Evening = ()=>{
     return (
-        <Text style={styles.text}>Good Evening</Text>
+        <Text style={styles.text1}>Good Evening</Text>
     )
 }
 export default Userinfo
@@ -96,7 +96,11 @@ const styles = StyleSheet.create({
         alignItems:'center',
     },
     text:{
-        fontSize:24,
+        fontSize:25,
+        fontWeight:'bold',
+    },
+    text1:{
+        fontSize:16,
         fontWeight:'bold',
     }
 })

@@ -1,17 +1,13 @@
 import { StyleSheet, Text, View , TouchableOpacity } from 'react-native'
 import React from 'react'
-import Clipboard from '@react-native-clipboard/clipboard'
-
+// import Clipboard from '@react-native-clipboard/clipboard'
+import * as Clipboard from 'expo-clipboard';
 const UserAccount = () => {
     const textToCopy = 'Hello Fast Pay User'
 
-    const handleCopyText = async ()=>{
-        try{
-            await Clipboard.setString(textToCopy);
-            console.log('Text copied to clipboard:',textToCopy);
-        }catch(error){
-            console.log('Error copying text to clipboard:', error);
-        }
+    const handleCopyText =  async ()=>{
+      await Clipboard.setStringAsync(textToCopy);
+      alert(`Text "${textToCopy}" copied to clipboard.`);
     };
   return (
     <View >
