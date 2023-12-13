@@ -1,20 +1,21 @@
 import { StyleSheet, Text, View , TouchableOpacity } from 'react-native'
 import React from 'react'
 // import Clipboard from '@react-native-clipboard/clipboard'
-import * as Clipboard from 'expo-clipboard';
+// import * as Clipboard from 'expo-clipboard';
 const UserAccount = () => {
     const textToCopy = 'Hello Fast Pay User'
 
-    const handleCopyText =  async ()=>{
-      await Clipboard.setStringAsync(textToCopy);
-      alert(`Text "${textToCopy}" copied to clipboard.`);
-    };
+    // const handleCopyText =  async ()=>{
+    //   // await Clipboard.setString(textToCopy)
+    //   await Clipboard.setStringAsync(textToCopy);
+    //   alert(`Text "${textToCopy}" copied to clipboard.`);
+    // };
   return (
     <View >
       <Text>{textToCopy}</Text>
-      <TouchableOpacity onPress={handleCopyText}>
+      {/* <TouchableOpacity onPress={handleCopyText}>
         <Text>Copy</Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
     </View>
   )
 }

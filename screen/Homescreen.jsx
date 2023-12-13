@@ -19,7 +19,7 @@ const Homescreen = () => {
    <SafeAreaView>
      <View>
       <Userinfo/>
-      <Text>Homescreen</Text>
+      {/* <Text>Homescreen</Text> */}
     </View>
    </SafeAreaView>
   )
