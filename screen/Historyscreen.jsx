@@ -3,6 +3,7 @@ import React from 'react'
 import { SafeAreaView } from 'react-native'
 import { useLayoutEffect } from 'react'
 import { useNavigation } from '@react-navigation/native'
+import Empty from '../components/Empty'
 const Historyscreen = () => {
   const navigation = useNavigation()
   useLayoutEffect(()=>{
@@ -22,6 +23,7 @@ const Historyscreen = () => {
         <Text>{'\u20A6'}0.00</Text>
         </View>
       </View>
+      {/* <Empty/> */}
     </View>
   </SafeAreaView>
   )
