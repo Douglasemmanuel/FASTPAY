@@ -14,7 +14,14 @@ const Historyscreen = () => {
   <SafeAreaView>
 
     <View>
-      <Text>Historyscreen</Text>
+      <Text>Recent Activities</Text>
+      <View style={{flexDirection:'row'}}>
+        <Text></Text>
+        <Text></Text>
+        <View style={{borderRadius:50}}>
+        <Text>{'\u20A6'}0.00</Text>
+        </View>
+      </View>
     </View>
   </SafeAreaView>
   )

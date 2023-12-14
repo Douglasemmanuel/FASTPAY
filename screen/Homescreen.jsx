@@ -8,6 +8,7 @@ import AccountDetails from '../components/AccountDetails'
 import Historyscreen from './Historyscreen'
 import Userinfo from '../components/Userinfo'
 import UserAccount from '../components/UserAccount'
+import History from '../components/History'
 const Homescreen = () => {
   const navigation = useNavigation()
   useLayoutEffect(()=>{
@@ -19,6 +20,7 @@ const Homescreen = () => {
    <SafeAreaView>
      <View>
       <Userinfo/>
+      <History/>
       {/* <Text>Homescreen</Text> */}
     </View>
    </SafeAreaView>
