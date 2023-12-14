@@ -22,8 +22,11 @@ const Loginscreen = () => {
  function move(){
   navigation.navigate('signup')
 }
+// function signin(){
+//   navigation.navigate('entrypin')
+// }
 function signin(){
-  navigation.navigate('entrypin')
+  navigation.navigate('home')
 }
 const [email , setEmail] = useState('')
 const [password , setPassword] = useState('')
