@@ -32,10 +32,13 @@ const Bottomnavigation = () => {
       component={Homescreen}
       options={{
         tabBarLabel: 'Home',
-        tabBarIcon: ({ color }) => (
-          // <MaterialCommunityIcons name="home" color={color} size={26} />
-          <Icon name="home" color={color} size={26} />
+        tabBarIcon: ({ color, size }) => (
+          <MaterialCommunityIcons name="home" color={color} size={size} />
         ),
+        // tabBarIcon: ({ color }) => (
+        //   // <MaterialCommunityIcons name="home" color={color} size={26} />
+        //   <Icon name="home" color={color} size={26} />
+        // ),
       }}
       />
        <Tab.Screen 

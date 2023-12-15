@@ -7,6 +7,8 @@ import { useNavigation } from '@react-navigation/native'
 import getToken from "../Services/AsyncStorage"
 import { Platform } from 'react-native'
 import { useLayoutEffect } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
+import {faWallet} from "@fortawesome/free-solid-svg-icons/faWallet"
 const Splashscreen = () => {
   const translateY = useRef(new Animated.Value(0)).current
   useLayoutEffect(()=>{
@@ -69,7 +71,8 @@ const Splashscreen = () => {
         fontWeight:'bold',
       }}
       >
-        Fastpay
+       {/* <View><FontAwesomeIcon icon={faWallet} /></View> */}
+         Fastpay
         </Animated.Text>
     </View>
     </SafeAreaView>

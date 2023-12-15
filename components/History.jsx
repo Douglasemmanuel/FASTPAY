@@ -1,12 +1,16 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
+// import faWallet from 
+import {faWallet} from "@fortawesome/free-solid-svg-icons/faWallet"
 const History = () => {
     const navigation = useNavigation()
   return (
     <View style={styles.curvedView}>
       <Text style={{color:'grey' , marginLeft:15 , marginTop:10 , fontSize:15 , fontWeight:'bold'}}>Recent Activities</Text>
       <View style={{flexDirection:'row' , marginLeft:15, marginTop:10 }}>
+        <View><FontAwesomeIcon icon={faWallet} /></View>
         <Text style={{fontWeight:'bold' , fontSize:20 }}>Fast Pay</Text>
        <View style={{  marginLeft:10}}>
        <Text style={{fontWeight:'bold' ,fontSize:14}}>Just registered</Text>
