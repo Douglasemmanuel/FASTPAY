@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View , Button } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native'
 import { useLayoutEffect } from 'react'
@@ -18,7 +18,7 @@ const Homescreen = () => {
 },[])
   return (
    <SafeAreaView>
-     <View>
+     <View style={{marginLeft:20}}>
       <Userinfo/>
       <History/>
       {/* <Text>Homescreen</Text> */}
