@@ -7,8 +7,14 @@ import {faBuildingColumns} from "@fortawesome/free-solid-svg-icons/faBuildingCol
 const AccountIcon = () => {
   return (
     <View style={styles.curvedView}>
-      <View style={styles.container1}><FontAwesomeIcon icon={faBuildingColumns} size={30}  /></View>
+        <TouchableOpacity >
+      <View style={styles.container1} ><FontAwesomeIcon icon={faBuildingColumns} size={30}  /></View>
+      <Text style>Account Details</Text>
+      </TouchableOpacity>
+      <TouchableOpacity>
       <View style={styles.container1}><FontAwesomeIcon icon={faPaperPlane} size={30} /></View>
+      <Text style >Send Money</Text>
+      </TouchableOpacity>
     </View>
   )
 }
