@@ -10,13 +10,13 @@ const History = () => {
     <View style={styles.curvedView}>
       <Text style={{color:'grey' , marginLeft:15 , marginTop:10 , fontSize:15 , fontWeight:'bold'}}>Recent Activities</Text>
       <View style={{flexDirection:'row' , marginLeft:15, marginTop:10 }}>
-        <View><FontAwesomeIcon icon={faWallet} /></View>
-        <Text style={{fontWeight:'bold' , fontSize:20 }}>Fast Pay</Text>
-       <View style={{  marginLeft:10}}>
+        <View style={styles.container1}><FontAwesomeIcon icon={faWallet} /></View>
+        {/* <Text style={{fontWeight:'bold' , fontSize:20 }}>Fast Pay</Text> */}
+       <View style={{  marginLeft:15}}>
        <Text style={{fontWeight:'bold' ,fontSize:14}}>Just registered</Text>
         <Text style={{fontSize:12, color:'grey'}}>7 days ago</Text>
        </View>
-        <View style={{borderRadius:50 ,backgroundColor:'black' , width:50 , height:20  , marginLeft:60 }}>
+        <View style={{borderRadius:50 ,backgroundColor:'black' , width:50 , height:20  , marginLeft:80 }}>
         <Text style={{color:'white' , paddingTop:3 , fontWeight:'bold', fontSize:12 , paddingLeft:5}}>{'\u20A6'}0.00</Text>
         </View>
       </View>
@@ -40,6 +40,19 @@ const styles = StyleSheet.create({
         padding: 16,
         borderRadius: 8,
     },
+    container1: {
+      backgroundColor: 'white',
+      shadowColor: '#000',
+      shadowOffset: {
+        width: 0,
+        height: 1,
+      },
+      shadowOpacity: 0.25,
+      shadowRadius: 3.84,
+      elevation: 5,
+      padding: 7,
+      borderRadius: 35,
+  },
     curvedView: {
         width: 350,
         height: 90,
