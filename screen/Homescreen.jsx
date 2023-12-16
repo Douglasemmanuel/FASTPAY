@@ -9,6 +9,7 @@ import Historyscreen from './Historyscreen'
 import Userinfo from '../components/Userinfo'
 import UserAccount from '../components/UserAccount'
 import History from '../components/History'
+import AccountIcon from '../components/AccountIcon'
 import { TouchableOpacity } from 'react-native'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import {faMoneyBillTransfer} from "@fortawesome/free-solid-svg-icons/faMoneyBillTransfer"
@@ -25,6 +26,7 @@ const Homescreen = () => {
      <View >
       <Userinfo/>
       <AccountBalance/>
+      <AccountIcon/>
       <History/>
       {/* <Text>Homescreen</Text> */}
       <View style={styles.container}>

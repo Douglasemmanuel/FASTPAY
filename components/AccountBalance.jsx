@@ -5,6 +5,8 @@ import { TouchableOpacity } from 'react-native'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import {faEye} from "@fortawesome/free-solid-svg-icons/faEye"
 import {faEyeSlash} from "@fortawesome/free-solid-svg-icons/faEyeSlash"
+import {faPaperPlane} from "@fortawesome/free-solid-svg-icons/faPaperPlane"
+import {faBuildingColumns} from "@fortawesome/free-solid-svg-icons/faBuildingColumns"
 const AccountBalance = () => {
     const [vissible , setVissible] = useState(true)
     const toggleComponent =()=>{
@@ -12,6 +14,7 @@ const AccountBalance = () => {
     }
   return (
     <View style={styles.curvedView}>
+    <View>
     <TouchableOpacity onPress={toggleComponent} style={{flexDirection:'row'  , alignItems:'center' , justifyContent:'center' , paddingTop:10}}>
       <Text style={{fontSize:15, textAlign:'center' , color:'grey' , fontWeight:90}}>Wallet Balance</Text>
       {/* style={{flex:1}} */}
@@ -19,8 +22,9 @@ const AccountBalance = () => {
      {vissible?<FontAwesomeIcon icon={faEye} /> :<FontAwesomeIcon icon={faEyeSlash} />}
      </View>
     </TouchableOpacity>
+    </View>
     <View>
-    {vissible ?   <Hide/>:<Show/> }
+    {vissible ? <Hide/>:<Show/> }
     </View>
     </View>
   )
@@ -43,7 +47,7 @@ const Hide=()=>{
     return (
         <View>
          <View style={{flexDirection:'row', alignItems:'center' , justifyContent:'center'}}>
-         <Text style={{fontWeight:'bold' ,  fontSize:40 , textAlign:'center'  , paddingBottom:80}}>...</Text>
+         <Text style={{fontWeight:'bold' ,  fontSize:30 , textAlign:'center'  , paddingBottom:100}}>...</Text>
          {/* <View style={{flex:1}}></View> */}
          </View>
          {/* <Text style={{fontWeight:'bold' , fontSize:20}}>...</Text> */}
@@ -54,8 +58,9 @@ const Hide=()=>{
 
 const Icon =()=>{
   return (
-    <View>
-
+    <View style={{flexDirection:'row'}}>
+      <View style={styles.container1}><FontAwesomeIcon icon={faBuildingColumns} /></View>
+      <View style={styles.container1}><FontAwesomeIcon icon={faPaperPlane} /></View>
     </View>
   )
 }
@@ -76,7 +81,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
 },
 container1: {
-  backgroundColor: 'red',
+  backgroundColor: 'white',
   shadowColor: '#000',
   shadowOffset: {
     width: 0,
