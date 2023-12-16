@@ -2,7 +2,6 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
-// import faWallet from 
 import {faWallet} from "@fortawesome/free-solid-svg-icons/faWallet"
 const History = () => {
     const navigation = useNavigation()

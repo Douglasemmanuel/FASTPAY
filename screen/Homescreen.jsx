@@ -9,6 +9,9 @@ import Historyscreen from './Historyscreen'
 import Userinfo from '../components/Userinfo'
 import UserAccount from '../components/UserAccount'
 import History from '../components/History'
+import { TouchableOpacity } from 'react-native'
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
+import {faMoneyBillTransfer} from "@fortawesome/free-solid-svg-icons/faMoneyBillTransfer"
 const Homescreen = () => {
   const navigation = useNavigation()
   useLayoutEffect(()=>{
@@ -20,8 +23,18 @@ const Homescreen = () => {
    <SafeAreaView>
      <View style={{marginLeft:20}}>
       <Userinfo/>
+      <AccountBalance/>
       <History/>
       {/* <Text>Homescreen</Text> */}
+      <View style={styles.container}>
+      {/* Your other components go here */}
+
+      {/* Bottom Right Button */}
+      <TouchableOpacity style={styles.button}>
+        <View><FontAwesomeIcon icon={faMoneyBillTransfer} /></View>
+        {/* <Text style={styles.buttonText}>Button</Text> */}
+      </TouchableOpacity>
+    </View>
     </View>
    </SafeAreaView>
   )
@@ -29,4 +42,22 @@ const Homescreen = () => {
 
 export default Homescreen
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'relative',
+  },
+  button: {
+    position: 'absolute',
+    bottom: 16,
+    right: 16,
+    backgroundColor: 'blue',
+    padding: 10,
+    borderRadius: 25,
+  },
+  buttonText: {
+    color: 'white',
+  },
+})
