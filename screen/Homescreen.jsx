@@ -12,6 +12,7 @@ import History from '../components/History'
 import { TouchableOpacity } from 'react-native'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import {faMoneyBillTransfer} from "@fortawesome/free-solid-svg-icons/faMoneyBillTransfer"
+import { faPaperPlane} from "@fortawesome/free-solid-svg-icons/faPaperPlane"
 const Homescreen = () => {
   const navigation = useNavigation()
   useLayoutEffect(()=>{
@@ -31,7 +32,9 @@ const Homescreen = () => {
 
       {/* Bottom Right Button */}
       <TouchableOpacity style={styles.button}>
-        <View><FontAwesomeIcon icon={faMoneyBillTransfer} /></View>
+      <View><FontAwesomeIcon icon={ faPaperPlane} color='white'  size={32}/></View>
+     
+        {/* <View><FontAwesomeIcon icon={faMoneyBillTransfer} color='white'  size={25}/></View> */}
         {/* <Text style={styles.buttonText}>Button</Text> */}
       </TouchableOpacity>
     </View>
@@ -52,7 +55,7 @@ const styles = StyleSheet.create({
   button: {
     position: 'absolute',
     bottom: 16,
-    right: 16,
+    right: 36,
     backgroundColor: 'blue',
     padding: 10,
     borderRadius: 25,

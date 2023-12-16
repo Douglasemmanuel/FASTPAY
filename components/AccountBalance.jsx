@@ -3,8 +3,8 @@ import React from 'react'
 import { useState } from 'react'
 import { TouchableOpacity } from 'react-native'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
-import {faEye} from "@fortawesome/free-solid-svg-iconsfaEye"
-import {faEyeSlash} from "@fortawesome/free-solid-svg-iconsfaEyeSlash"
+import {faEye} from "@fortawesome/free-solid-svg-icons/faEye"
+import {faEyeSlash} from "@fortawesome/free-solid-svg-icons/faEyeSlash"
 const AccountBalance = () => {
     const [vissible , setVissible] = useState(true)
     const toggleComponent =()=>{
@@ -12,22 +12,25 @@ const AccountBalance = () => {
     }
   return (
     <View style={styles.curvedView}>
-    <TouchableOpacity onPress={toggleComponent} style={{flexDirection:'row'}}>
-      <Text style={{fontSize:15}}>Wallet Balance</Text>
-     <View style={{flex:1}}>
+    <TouchableOpacity onPress={toggleComponent} style={{flexDirection:'row'  , alignItems:'center' , justifyContent:'center' , paddingTop:10}}>
+      <Text style={{fontSize:15, textAlign:'center' , color:'grey' , fontWeight:90}}>Wallet Balance</Text>
+      {/* style={{flex:1}} */}
+     <View style={{marginLeft:5}}  >
      {vissible?<FontAwesomeIcon icon={faEye} /> :<FontAwesomeIcon icon={faEyeSlash} />}
      </View>
     </TouchableOpacity>
-    {vissible ? <Show/> : <Hide/> }
+    {vissible ?   <Hide/>:<Show/> }
     </View>
   )
 }
 const Show =()=>{
     return (
         <View>
-         <View style={{flexDirection:'row'}}>
-         <Text style={{fontWeight:'bold' , flex:1 , fontSize:20}}>{'\u20A6'} 50000.00</Text>
-         <View style={{flex:1}}></View>
+         <View style={{flexDirection:'row', alignItems:'center' , justifyContent:'center' }}>
+         {/* <Text style={styles.container1}> {'\u20A6'} </Text> */}
+         {/* flex:1 ,  */}
+         <Text style={{fontWeight:'bold' , fontSize:20 , textAlign:'center' , marginTop:10 }}> <Text style={{fontSize:15}}> {'\u20A6'}</Text> 50000.00</Text>
+         {/* <View style={{flex:1}}></View> */}
          </View>
          {/* <Text  style={{fontWeight:'bold' , fontSize:20}}>50000.00</Text> */}
           {/* <Text>Book balance <Text  style={{fontWeight:'bold' , fontSize:20}}>50000.00</Text></Text> */}
@@ -37,8 +40,8 @@ const Show =()=>{
 const Hide=()=>{
     return (
         <View>
-         <View style={{flexDirection:'row'}}>
-         <Text style={{fontWeight:'bold' , flex:1 , fontSize:20}}>...</Text>
+         <View style={{flexDirection:'row', alignItems:'center' , justifyContent:'center'}}>
+         <Text style={{fontWeight:'bold' ,  fontSize:40 , textAlign:'center'  , paddingBottom:80}}>...</Text>
          {/* <View style={{flex:1}}></View> */}
          </View>
          {/* <Text style={{fontWeight:'bold' , fontSize:20}}>...</Text> */}
@@ -63,17 +66,20 @@ const styles = StyleSheet.create({
     borderRadius: 8,
 },
 container1: {
-  backgroundColor: 'white',
+  backgroundColor: 'red',
   shadowColor: '#000',
   shadowOffset: {
     width: 0,
-    height: 1,
+    height: 3,
   },
   shadowOpacity: 0.25,
   shadowRadius: 3.84,
   elevation: 5,
   padding: 7,
-  borderRadius: 35,
+  borderRadius: 40,
+  width: 10,
+  height: 40,
+
 },
 curvedView: {
     width: 350,
