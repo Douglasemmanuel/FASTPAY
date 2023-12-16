@@ -12,10 +12,13 @@ const AccountBalance = () => {
     }
   return (
     <View style={styles.curvedView}>
-    {vissible ? <Show/> : <Hide/> }
-    <TouchableOpacity onPress={toggleComponent}>
-      {vissible?<FontAwesomeIcon icon={faEye} /> :<FontAwesomeIcon icon={faEyeSlash} />}
+    <TouchableOpacity onPress={toggleComponent} style={{flexDirection:'row'}}>
+      <Text style={{fontSize:15}}>Wallet Balance</Text>
+     <View style={{flex:1}}>
+     {vissible?<FontAwesomeIcon icon={faEye} /> :<FontAwesomeIcon icon={faEyeSlash} />}
+     </View>
     </TouchableOpacity>
+    {vissible ? <Show/> : <Hide/> }
     </View>
   )
 }
@@ -23,11 +26,11 @@ const Show =()=>{
     return (
         <View>
          <View style={{flexDirection:'row'}}>
-         <Text style={{fontWeight:'bold' , flex:1}}>{'\u20A6'} 50000.00</Text>
+         <Text style={{fontWeight:'bold' , flex:1 , fontSize:20}}>{'\u20A6'} 50000.00</Text>
          <View style={{flex:1}}></View>
          </View>
-    
-          <Text>Book balance <Text  style={{fontWeight:'bold' , fontSize:20}}>50000.00</Text></Text>
+         {/* <Text  style={{fontWeight:'bold' , fontSize:20}}>50000.00</Text> */}
+          {/* <Text>Book balance <Text  style={{fontWeight:'bold' , fontSize:20}}>50000.00</Text></Text> */}
         </View>
     )
 }
@@ -35,11 +38,11 @@ const Hide=()=>{
     return (
         <View>
          <View style={{flexDirection:'row'}}>
-         <Text style={{fontWeight:'bold' , flex:1}}>000</Text>
-         <View style={{flex:1}}></View>
+         <Text style={{fontWeight:'bold' , flex:1 , fontSize:20}}>...</Text>
+         {/* <View style={{flex:1}}></View> */}
          </View>
-    
-          <Text>Book balance <Text style={{fontWeight:'bold' , fontSize:20}}>...</Text></Text>
+         {/* <Text style={{fontWeight:'bold' , fontSize:20}}>...</Text> */}
+          {/* <Text>Book balance <Text style={{fontWeight:'bold' , fontSize:20}}>...</Text></Text> */}
         </View>
       )
 }

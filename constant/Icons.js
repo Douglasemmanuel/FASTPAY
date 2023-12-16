@@ -1,0 +1,10 @@
+<FontAwesomeIcon icon={faLocationArrow} />
+<FontAwesomeIcon icon={faPlaneUp} />
+<FontAwesomeIcon icon={faPlugCircleBolt} />
+<FontAwesomeIcon icon={faPaperPlane} />
+<FontAwesomeIcon icon={faPhoneVolume} />
+<FontAwesomeIcon icon={faCreditCard} />
+<FontAwesomeIcon icon={faCircleArrowRight} />
+<FontAwesomeIcon icon={faCircleArrowLeft} />
+<FontAwesomeIcon icon={faChartSimple} />
+<FontAwesomeIcon icon={faArrowLeft} />
