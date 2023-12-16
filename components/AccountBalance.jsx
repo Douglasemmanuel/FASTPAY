@@ -19,7 +19,9 @@ const AccountBalance = () => {
      {vissible?<FontAwesomeIcon icon={faEye} /> :<FontAwesomeIcon icon={faEyeSlash} />}
      </View>
     </TouchableOpacity>
+    <View>
     {vissible ?   <Hide/>:<Show/> }
+    </View>
     </View>
   )
 }
@@ -48,6 +50,14 @@ const Hide=()=>{
           {/* <Text>Book balance <Text style={{fontWeight:'bold' , fontSize:20}}>...</Text></Text> */}
         </View>
       )
+}
+
+const Icon =()=>{
+  return (
+    <View>
+
+    </View>
+  )
 }
 export default AccountBalance
 
@@ -85,6 +95,8 @@ curvedView: {
     width: 350,
     height: 90,
     backgroundColor: 'white',
+    marginLeft:20,
+    marginTop:10,
     borderRadius: 20, // Adjust this value for the desired curve
   },
 })

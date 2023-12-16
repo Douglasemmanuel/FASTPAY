@@ -8,3 +8,4 @@
 <FontAwesomeIcon icon={faCircleArrowLeft} />
 <FontAwesomeIcon icon={faChartSimple} />
 <FontAwesomeIcon icon={faArrowLeft} />
+<FontAwesomeIcon icon={faBuildingColumns} />

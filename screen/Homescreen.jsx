@@ -22,7 +22,7 @@ const Homescreen = () => {
 },[])
   return (
    <SafeAreaView>
-     <View style={{marginLeft:20}}>
+     <View >
       <Userinfo/>
       <AccountBalance/>
       <History/>

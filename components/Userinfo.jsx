@@ -94,13 +94,33 @@ const styles = StyleSheet.create({
         flex:1,
         justifyContent:'center',
         alignItems:'center',
+        backgroundColor: 'black',
+        shadowColor: '#000',
+        shadowOffset: {
+          width: 0,
+          height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+        elevation: 5,
+        padding: 16,
+        borderRadius: 8,
     },
     text:{
         fontSize:25,
         fontWeight:'bold',
+        marginLeft:20,
     },
     text1:{
         fontSize:16,
         fontWeight:'bold',
-    }
+        marginLeft:20,
+    },
+    curvedView: {
+        marginTop:10,
+        width: 350,
+        height: 90,
+        backgroundColor: 'white',
+        borderRadius: 20, // Adjust this value for the desired curve
+      },
 })

@@ -57,6 +57,7 @@ const styles = StyleSheet.create({
         width: 350,
         height: 90,
         backgroundColor: 'white',
+        marginLeft:20,
         borderRadius: 20, // Adjust this value for the desired curve
       },
     
