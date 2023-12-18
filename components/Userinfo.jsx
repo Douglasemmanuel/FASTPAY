@@ -2,6 +2,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { useEffect, useState } from 'react'
 import { SafeAreaView } from 'react-native';
+import UserImage from "../components/UserImage"
 const Userinfo = () => {
     const [isMorning , setIsMorning] = useState(false);
     const [isAfternoon , setIsAfternoon] = useState(false);
@@ -68,6 +69,9 @@ const Userinfo = () => {
             <Text>Hey user</Text>
         )}
       </View>
+    </View>
+    <View style={{flex:1}} >
+         <UserImage/>   
     </View>
     </SafeAreaView>
   )

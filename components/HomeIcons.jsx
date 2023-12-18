@@ -10,11 +10,14 @@ import {faPlaneUp} from "@fortawesome/free-solid-svg-icons/faPlaneUp"
 
 const HomeIcons = () => {
     const navigation = useNavigation()
+    function move(){
+      navigation.navigate('other')
+    }
   return (
-    <View style={{marginLeft:20}}>
+    <View style={{marginLeft:15 , marginTop:16}}>
       <View style={{flexDirection:'row'}}>
       <Text style={{fontWeight:'bold' , fontSize:20 , flex:4}}>Quick Links</Text>
-      <TouchableOpacity style={{ flex:1}} onPress={navigation.navigate('')}>
+      <TouchableOpacity style={{ flex:1}} onPress={move}>
       <Text style={{fontWeight:70 , fontSize:20 , color:'grey' }}>See all</Text>
       </TouchableOpacity>
       </View>
