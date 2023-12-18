@@ -16,3 +16,6 @@
 <FontAwesomeIcon icon={faGraduationCap} />
 <FontAwesomeIcon icon={faTicket} />
 <FontAwesomeIcon icon={faUserHeadset} />
+<FontAwesomeIcon icon={faCaretDown} />
+<FontAwesomeIcon icon={faArrowRight} />
+<FontAwesomeIcon icon={faCaretLeft} />

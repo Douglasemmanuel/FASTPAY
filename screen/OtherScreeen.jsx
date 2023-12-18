@@ -9,6 +9,8 @@ import {faWallet} from "@fortawesome/free-solid-svg-icons/faWallet"
 import {faPaperPlane} from "@fortawesome/free-solid-svg-icons/faPaperPlane"
 import {faBuildingColumns} from "@fortawesome/free-solid-svg-icons/faBuildingColumns"
 import {faPlus}  from "@fortawesome/free-solid-svg-icons/faPlus"
+import {faArrowLeft}  from "@fortawesome/free-solid-svg-icons/faArrowLeft"
+import {faCaretLeft}  from "@fortawesome/free-solid-svg-icons/faCaretLeft"
 const OtherScreeen = () => {
     const navigation = useNavigation()
     useLayoutEffect(()=>{
@@ -16,18 +18,29 @@ const OtherScreeen = () => {
           headerShown:false
       })
   },[])
+  function move(){
+    // navigation.goBack()
+    navigation.canGoBack()
+  }
   return (
     <SafeAreaView>
         <View>
-      <Text style={{fontWeight:'bold' , fontSize:20}}>Payments</Text>
+        <View style={{flexDirection:'row'}}>
+            <View style={{marginTop:5}} onPress={move}>
+            <FontAwesomeIcon icon={faArrowLeft} size={30}  />
+            </View>
+            <View style={{marginLeft:10}}>
+            <Text style={{fontWeight:'bold' , fontSize:30}}>Payments</Text>
+            </View>
+        </View>
       <View style={styles.curvedView}>
         <TouchableOpacity style={{ flexDirection:'row'}} >
-      <View style={styles.container1} ><FontAwesomeIcon icon={faBuildingColumns} size={30}  /></View>
-      <Text style={{marginTop:5}}>Account Details</Text>
+      <View style={styles.container1} ><FontAwesomeIcon icon={faCaretLeft} size={25}/></View>
+      <Text style={styles.text} > Buy Airtime</Text>
       </TouchableOpacity>
       <TouchableOpacity style={{ flexDirection:'row'}} >
-      <View style={styles.container1}><FontAwesomeIcon icon={faPlus} size={30} /></View>
-      <Text style={{marginTop:5}} >Top up</Text>
+      <View style={styles.container1}><FontAwesomeIcon icon={faPlus} size={20} /></View>
+      <Text style={styles.text} >Buy Data</Text>
       </TouchableOpacity>
     </View>
     </View>
@@ -50,20 +63,27 @@ const styles = StyleSheet.create({
         elevation: 5,
         padding: 15,
         borderRadius: 50,
-        width: 60,
-        height: 60,
+        width: 50,
+        height: 50,
       
+      },
+      text:{
+        marginTop:15,
+        marginLeft:10,
+        fontWeight:90,
+        fontSize:15
       },
       curvedView: {
         //   width: 380,
         //   height: 90,
         //   backgroundColor: 'white',
           marginLeft:15,
-          // marginTop:10,
+          marginTop:40,
         //   justifyContent:'center',
         //   alignItems:'center' ,
-        //   flexDirection:'row' ,  
+          flexDirection:'column' ,  
           // rowGap:10,
+          rowGap:20,
         //   borderRadius: 20, // Adjust this value for the desired curve
           borderTopRightRadius: 0,  // Set to 0 to remove right top border radius
           borderBottomRightRadius: 0,
