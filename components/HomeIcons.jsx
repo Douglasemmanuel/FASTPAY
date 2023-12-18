@@ -4,7 +4,10 @@ import { TouchableOpacity } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import {faPaperPlane} from "@fortawesome/free-solid-svg-icons/faPaperPlane"
-import {faBuildingColumns} from "@fortawesome/free-solid-svg-icons/faBuildingColumns"
+import {faPhoneVolume} from "@fortawesome/free-solid-svg-icons/faPhoneVolume"
+import {faPlugCircleBolt} from "@fortawesome/free-solid-svg-icons/faPlugCircleBolt"
+import {faPlaneUp} from "@fortawesome/free-solid-svg-icons/faPlaneUp"
+
 const HomeIcons = () => {
     const navigation = useNavigation()
   return (
@@ -16,20 +19,20 @@ const HomeIcons = () => {
       </TouchableOpacity>
       </View>
       <View style={styles.curvedView}>
-        <TouchableOpacity >
+        <TouchableOpacity  style={{flex:1}} >
       <View style={styles.container1} ><FontAwesomeIcon icon={faPaperPlane} size={18}  /></View>
-      <Text  style={styles.text}>Bank Transfer</Text>
+      <Text  style={styles.text}>BankTransfer</Text>
       </TouchableOpacity>
-      <TouchableOpacity>
-      <View style={styles.container1}><FontAwesomeIcon icon={faPaperPlane} size={18} /></View>
+      <TouchableOpacity style={{flex:1}}>
+      <View style={styles.container1}><FontAwesomeIcon icon={faPhoneVolume} size={18} /></View>
       <Text style={styles.text} >Airtime</Text>
       </TouchableOpacity>
-       <TouchableOpacity>
-      <View style={styles.container1}><FontAwesomeIcon icon={faPaperPlane} size={18} /></View>
+       <TouchableOpacity style={{flex:1}}>
+      <View style={styles.container1}><FontAwesomeIcon icon={faPlaneUp} size={18} /></View>
       <Text style={styles.text} >Flight</Text>
       </TouchableOpacity>
-       <TouchableOpacity>
-      <View style={styles.container1}><FontAwesomeIcon icon={faPaperPlane} size={18} /></View>
+       <TouchableOpacity style={{flex:1}}>
+      <View style={styles.container1}><FontAwesomeIcon icon={faPlugCircleBolt} size={20} /></View>
       <Text style={styles.text} >Electricity</Text>
       </TouchableOpacity>
     </View>
@@ -57,7 +60,10 @@ const styles = StyleSheet.create({
   
   },
   text:{
-    fontSize:12
+    fontSize:12,
+    marginTop:10,
+    marginLeft:4,
+    fontWeight:80
   },
   curvedView: {
     //   width: 350,
