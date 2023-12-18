@@ -11,9 +11,10 @@ import UserAccount from '../components/UserAccount'
 import History from '../components/History'
 import AccountIcon from '../components/AccountIcon'
 import HomeIcons from '../components/HomeIcons'
+import News from '../components/News'
 import { TouchableOpacity } from 'react-native'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
-import {faMoneyBillTransfer} from "@fortawesome/free-solid-svg-icons/faMoneyBillTransfer"
+import {faHandsHelping}  from "@fortawesome/free-solid-svg-icons/faHandsHelping"
 import { faPaperPlane} from "@fortawesome/free-solid-svg-icons/faPaperPlane"
 const Homescreen = () => {
   const navigation = useNavigation()
@@ -29,6 +30,7 @@ const Homescreen = () => {
       <AccountBalance/>
       <AccountIcon/>
       <HomeIcons/>
+      <News/>
       <History/>
       {/* <Text>Homescreen</Text> */}
       <View style={styles.container}>
@@ -36,7 +38,7 @@ const Homescreen = () => {
 
       {/* Bottom Right Button */}
       <TouchableOpacity style={styles.button}>
-      <View><FontAwesomeIcon icon={ faPaperPlane} color='white'  size={32}/></View>
+      <View><FontAwesomeIcon icon={faHandsHelping} color='white'  size={32}/></View>
      
         {/* <View><FontAwesomeIcon icon={faMoneyBillTransfer} color='white'  size={25}/></View> */}
         {/* <Text style={styles.buttonText}>Button</Text> */}

@@ -4,16 +4,17 @@ import { TouchableOpacity } from 'react-native'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import {faPaperPlane} from "@fortawesome/free-solid-svg-icons/faPaperPlane"
 import {faBuildingColumns} from "@fortawesome/free-solid-svg-icons/faBuildingColumns"
+import {faPlus}  from "@fortawesome/free-solid-svg-icons/faPlus"
 const AccountIcon = () => {
   return (
     <View style={styles.curvedView}>
-        <TouchableOpacity >
+        <TouchableOpacity  >
       <View style={styles.container1} ><FontAwesomeIcon icon={faBuildingColumns} size={30}  /></View>
-      <Text style>Account Details</Text>
+      <Text style={{marginTop:5}}>Account Details</Text>
       </TouchableOpacity>
-      <TouchableOpacity>
-      <View style={styles.container1}><FontAwesomeIcon icon={faPaperPlane} size={30} /></View>
-      <Text style >Send Money</Text>
+      <TouchableOpacity style={{marginLeft:30}} >
+      <View style={styles.container1}><FontAwesomeIcon icon={faPlus} size={30} /></View>
+      <Text style={{marginTop:5}} >Top up</Text>
       </TouchableOpacity>
     </View>
   )
@@ -39,15 +40,19 @@ const styles = StyleSheet.create({
       
       },
       curvedView: {
-        //   width: 350,
-        //   height: 90,
-        //   backgroundColor: 'white',
-        //   marginLeft:20,
-          marginTop:10,
+          width: 380,
+          height: 90,
+          backgroundColor: 'white',
+          marginLeft:15,
+          // marginTop:10,
           justifyContent:'center',
           alignItems:'center' ,
           flexDirection:'row' ,  
-          rowGap:10,
-        //   borderRadius: 20, // Adjust this value for the desired curve
+          // rowGap:10,
+          borderRadius: 20, // Adjust this value for the desired curve
+          borderTopRightRadius: 0,  // Set to 0 to remove right top border radius
+          borderBottomRightRadius: 0,
+          borderBottomLeftRadius:0,
+          borderTopLeftRadius:0,
         },
 })

@@ -56,7 +56,8 @@ const Userinfo = () => {
     },[])
   return (
     <SafeAreaView>
-    <View>
+    <View style={{flexDirection:'row'}}>
+    <View style={{flex:1}}>
       <Text style={styles.text}> Hello Doggie</Text>
       <View>
         {isMorning?(
@@ -72,6 +73,7 @@ const Userinfo = () => {
     </View>
     <View style={{flex:1}} >
          <UserImage/>   
+    </View>
     </View>
     </SafeAreaView>
   )
@@ -113,12 +115,12 @@ const styles = StyleSheet.create({
     text:{
         fontSize:25,
         fontWeight:'bold',
-        marginLeft:20,
+        marginLeft:15,
     },
     text1:{
         fontSize:16,
         fontWeight:'bold',
-        marginLeft:20,
+        marginLeft:15,
     },
     curvedView: {
         marginTop:10,

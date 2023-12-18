@@ -102,6 +102,8 @@ curvedView: {
     backgroundColor: 'white',
     marginLeft:15,
     marginTop:10,
-    borderRadius: 20, // Adjust this value for the desired curve
+    borderRadius: 20,
+    borderBottomRightRadius: 0,
+    borderBottomLeftRadius:0, // Adjust this value for the desired curve
   },
 })

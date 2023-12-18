@@ -9,3 +9,10 @@
 <FontAwesomeIcon icon={faChartSimple} />
 <FontAwesomeIcon icon={faArrowLeft} />
 <FontAwesomeIcon icon={faBuildingColumns} />
+<FontAwesomeIcon icon={faTv} />
+<FontAwesomeIcon icon={faMobile} />
+<FontAwesomeIcon icon={faBaseball} />
+<FontAwesomeIcon icon={faPlaceOfWorship} />
+<FontAwesomeIcon icon={faGraduationCap} />
+<FontAwesomeIcon icon={faTicket} />
+<FontAwesomeIcon icon={faUserHeadset} />
