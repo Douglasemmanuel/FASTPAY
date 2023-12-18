@@ -4,6 +4,7 @@ import Homescreen from '../screen/Homescreen'
 import Transferscreen from '../screen/Transferscreen'
 import Historyscreen from '../screen/Historyscreen'
 import Profilescreen from '../screen/Profilescreen'
+import Cardscreen from '../screen/Cardscreen'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -32,13 +33,13 @@ const Bottomnavigation = () => {
       component={Homescreen}
       options={{
         tabBarLabel: 'Home',
-        tabBarIcon: ({ color, size }) => (
-          <MaterialCommunityIcons name="home" color={color} size={size} />
-        ),
-        // tabBarIcon: ({ color }) => (
-        //   // <MaterialCommunityIcons name="home" color={color} size={26} />
-        //   <Icon name="home" color={color} size={26} />
+        // tabBarIcon: ({ color, size }) => (
+        //   <MaterialCommunityIcons name="home" color={color} size={size} />
         // ),
+        tabBarIcon: ({ color }) => (
+          // <MaterialCommunityIcons name="home" color={color} size={26} />
+          <Icon name="home" color={color} size={26} />
+        ),
       }}
       />
        <Tab.Screen 
@@ -53,6 +54,20 @@ const Bottomnavigation = () => {
         ),
         tabBarColor:"#FF4433",
         headerShown: false
+      }}
+      />
+        <Tab.Screen 
+      name="card" 
+      // options={{ headerShown: false }}
+      component={Cardscreen}
+      options={{
+        tabBarLabel: 'Card',
+        tabBarIcon: ({ color  }) => (
+          // <MaterialCommunityIcons name="account" color={color} size={26} />
+          <Icon name="person" color={color} size={26} />
+        ),
+        tabBarColor:"#FF4433"
+        // headerShown: false
       }}
       />
        <Tab.Screen 
@@ -73,7 +88,7 @@ const Bottomnavigation = () => {
       component={Profilescreen}
       options={{
         tabBarLabel: 'Profile',
-        tabBarIcon: ({ color , }) => (
+        tabBarIcon: ({ color  }) => (
           // <MaterialCommunityIcons name="account" color={color} size={26} />
           <Icon name="person" color={color} size={26} />
         ),
@@ -81,6 +96,7 @@ const Bottomnavigation = () => {
         // headerShown: false
       }}
       />
+     
    </Tab.Navigator>
   )
 }

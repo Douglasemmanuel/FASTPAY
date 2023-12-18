@@ -11,6 +11,7 @@ import Bottomnavigation from "./Bottomnavigation";
 import Splashscreen from "../screen/Splashscreen";
 import Entrypinscreen from "../screen/Entrypinscreen";
 import OtherScreeen from "../screen/OtherScreeen";
+import Cardscreen from "../screen/Cardscreen";
 const Stack = createStackNavigator()
 export default function Navigation(){
     const onboard = useSelector((state)=> state.onboard)
@@ -31,6 +32,7 @@ export default function Navigation(){
                     <Stack.Screen  name='entrypin' component={Entrypinscreen}/>
                 <Stack.Screen name='login' component={Loginscreen}/>
                 <Stack.Screen name='signup' component={Signupscreen}/>
+                <Stack.Screen name='card' component={Cardscreen} />
                 <Stack.Screen  name='home' component={Bottomnavigation}  options={{headerShown:false}}/>
                 <Stack.Screen name='forget' component={ForgetPassword}/>
                 <Stack.Screen  name='transfer' component={Transferscreen}/>
