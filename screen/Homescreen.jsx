@@ -16,6 +16,7 @@ import { TouchableOpacity } from 'react-native'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import {faHandsHelping}  from "@fortawesome/free-solid-svg-icons/faHandsHelping"
 import { faPaperPlane} from "@fortawesome/free-solid-svg-icons/faPaperPlane"
+
 const Homescreen = () => {
   const navigation = useNavigation()
   useLayoutEffect(()=>{
@@ -60,8 +61,8 @@ const styles = StyleSheet.create({
   },
   button: {
     position: 'absolute',
-    bottom: 8,
-    right: 36,
+    bottom: 6,
+    right: 30,
     backgroundColor: 'blue',
     padding: 10,
     borderRadius: 25,

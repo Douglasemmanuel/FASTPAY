@@ -90,7 +90,7 @@ const Afternoon = ()=>{
 }
 const Evening = ()=>{
     return (
-        <Text style={styles.text1}>Good Evening</Text>
+        <Text style={styles.text1}>Good Evening,wash your hands</Text>
     )
 }
 export default Userinfo
