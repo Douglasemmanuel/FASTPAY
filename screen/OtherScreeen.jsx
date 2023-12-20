@@ -12,6 +12,17 @@ import {faPlus}  from "@fortawesome/free-solid-svg-icons/faPlus"
 import {faArrowLeft}  from "@fortawesome/free-solid-svg-icons/faArrowLeft"
 import {faCaretLeft}  from "@fortawesome/free-solid-svg-icons/faCaretLeft"
 import {faChevronRight}  from "@fortawesome/free-solid-svg-icons/faChevronRight"
+import {faTicket} from "@fortawesome/free-solid-svg-icons/faTicket"
+import {faTv} from "@fortawesome/free-solid-svg-icons/faTv"
+import {faPlugCircleBolt} from "@fortawesome/free-solid-svg-icons/faPlugCircleBolt"
+import {faMobile}  from "@fortawesome/free-solid-svg-icons/faMobile"
+import {faChartSimple} from "@fortawesome/free-solid-svg-icons/faChartSimple"
+import {faGraduationCap} from "@fortawesome/free-solid-svg-icons/faGraduationCap"
+import {faBaseball} from "@fortawesome/free-solid-svg-icons/faBaseball"
+import {faPlaceOfWorship} from "@fortawesome/free-solid-svg-icons/faPlaceOfWorship"
+import {faPlane} from "@fortawesome/free-solid-svg-icons/faPlane"
+
+
 const OtherScreeen = () => {
     const navigation = useNavigation()
     useLayoutEffect(()=>{
@@ -22,40 +33,85 @@ const OtherScreeen = () => {
   function move(){
     // navigation.goBack()
     navigation.canGoBack()
+    // navigation.navigate('home')
   }
   return (
     <SafeAreaView>
         <View>
-        <View style={{flexDirection:'row'}}>
-            <View style={{marginTop:5}} onPress={move}>
+        <View style={{flexDirection:'row'}} onPress={move}>
+            <View style={{marginTop:5  , marginLeft:15}} onPress={move}>
             <FontAwesomeIcon icon={faArrowLeft} size={30}  />
             </View>
             <View style={{marginLeft:10}}>
             <Text style={{fontWeight:'bold' , fontSize:30}}>Payments</Text>
             </View>
+            
         </View>
       <View style={styles.curvedView}>
       <TouchableOpacity style={{ flexDirection:'row'}} >
-      <View style={styles.container1} ><FontAwesomeIcon icon={faCaretLeft} size={25}/></View>
+        <View style={{flex:1}}>
+      <View style={styles.container1} ><FontAwesomeIcon icon={faMobile} size={25}/></View>
+        </View>
       <Text style={styles.text} > Buy Airtime</Text>
       <View style={styles.container2}><FontAwesomeIcon icon={faChevronRight} size={20}/></View>
       </TouchableOpacity>
       <TouchableOpacity style={{ flexDirection:'row'}} >
-      <View style={styles.container1} ><FontAwesomeIcon icon={faCaretLeft} size={25}/></View>
-      <Text style={styles.text} > Buy Airtime</Text>
+        <View style={{flex:1}}>
+      <View style={styles.container1} ><FontAwesomeIcon icon={faChartSimple} size={25}/></View>
+        </View>
+      <Text style={styles.text} > Buy Data</Text>
       <View style={styles.container2}><FontAwesomeIcon icon={faChevronRight} size={20}/></View>
       </TouchableOpacity>
       <TouchableOpacity style={{ flexDirection:'row'}} >
-      <View style={styles.container1} ><FontAwesomeIcon icon={faCaretLeft} size={25}/></View>
-      <Text style={styles.text} > Buy Airtime</Text>
+        <View style={{flex:1}}>
+      <View style={styles.container1} ><FontAwesomeIcon icon={faTv} size={25}/></View>
+        </View>
+      <Text style={styles.text} >Cable TV</Text>
       <View style={styles.container2}><FontAwesomeIcon icon={faChevronRight} size={20}/></View>
       </TouchableOpacity>
       <TouchableOpacity style={{ flexDirection:'row'}} >
-      <View style={styles.container1} ><FontAwesomeIcon icon={faCaretLeft} size={25}/></View>
-      <Text style={styles.text} > Buy Airtime</Text>
+     <View style={{flex:1}}> 
+     <View style={styles.container1} ><FontAwesomeIcon icon={faPlugCircleBolt} size={25}/></View>
+     </View>
+      <Text style={styles.text} >Electricity</Text>
       <View style={styles.container2}><FontAwesomeIcon icon={faChevronRight} size={20}/></View>
       </TouchableOpacity>
-      
+      <TouchableOpacity style={{ flexDirection:'row'}} >
+     <View style={{flex:1}}> 
+     <View style={styles.container1} ><FontAwesomeIcon icon={faTicket} size={25}/></View>
+     </View>
+      <Text style={styles.text} >Events,Entertainment and Ticketing</Text>
+      <View style={styles.container2}><FontAwesomeIcon icon={faChevronRight} size={20}/></View>
+      </TouchableOpacity>
+      <TouchableOpacity style={{ flexDirection:'row'}} >
+     <View style={{flex:1}}> 
+     <View style={styles.container1} ><FontAwesomeIcon icon={faPlaceOfWorship} size={25}/></View>
+     </View>
+      <Text style={styles.text} >Religious Institution & NGO</Text>
+      <View style={styles.container2}><FontAwesomeIcon icon={faChevronRight} size={20}/></View>
+      </TouchableOpacity>
+      <TouchableOpacity style={{ flexDirection:'row'}} >
+     <View style={{flex:1}}> 
+     <View style={styles.container1} ><FontAwesomeIcon icon={faGraduationCap} size={25}/></View>
+     </View>
+      <Text style={styles.text} >School & Professional Bodies</Text>
+      <View style={styles.container2}><FontAwesomeIcon icon={faChevronRight} size={20}/></View>
+      </TouchableOpacity>
+      <TouchableOpacity style={{ flexDirection:'row'}} >
+     <View style={{flex:1}}> 
+     <View style={styles.container1} ><FontAwesomeIcon icon={faBaseball} size={25}/></View>
+     </View>
+      <Text style={styles.text} >Sports and Gaming</Text>
+      <View style={styles.container2}><FontAwesomeIcon icon={faChevronRight} size={20}/></View>
+      </TouchableOpacity>
+      <TouchableOpacity style={{ flexDirection:'row'}} >
+     <View style={{flex:1}}> 
+     <View style={styles.container1} ><FontAwesomeIcon icon={faPlane} size={25}/></View>
+     </View>
+      <Text style={styles.text} >Travels & Transportation /Logistics</Text>
+      <View style={styles.container2}><FontAwesomeIcon icon={faChevronRight} size={20}/></View>
+      </TouchableOpacity>
+     
     </View>
     </View>
     </SafeAreaView>
@@ -75,7 +131,7 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.25,
         shadowRadius: 3.84,
         elevation: 5,
-        padding: 15,
+        padding: 12,
         borderRadius: 50,
         width: 50,
         height: 50,
@@ -93,7 +149,8 @@ const styles = StyleSheet.create({
         // shadowRadius: 3.84,
         // elevation: 5,
         marginTop:15,
-        marginLeft:200,
+        flex:1,
+        // marginLeft:200,
         // borderRadius: 50,
         // width: 50,
         // height: 50,
@@ -103,7 +160,8 @@ const styles = StyleSheet.create({
         marginTop:15,
         marginLeft:10,
         fontWeight:90,
-        fontSize:15
+        fontSize:15,
+        flex:5,
       },
       curvedView: {
         //   width: 380,

@@ -19,3 +19,4 @@
 <FontAwesomeIcon icon={faCaretDown} />
 <FontAwesomeIcon icon={faArrowRight} />
 <FontAwesomeIcon icon={faCaretLeft} />
+<FontAwesomeIcon icon={faPlane} />
