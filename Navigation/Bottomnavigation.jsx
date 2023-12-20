@@ -37,8 +37,8 @@ const Bottomnavigation = () => {
         //   <MaterialCommunityIcons name="home" color={color} size={size} />
         // ),
         tabBarIcon: ({ color }) => (
-          // <MaterialCommunityIcons name="home" color={color} size={26} />
-          <Icon name="home" color={color} size={26} />
+          <MaterialCommunityIcons name="home" color={color} size={26} />
+          // <Icon name="home" color={color} size={26} />
         ),
       }}
       />
@@ -49,8 +49,8 @@ const Bottomnavigation = () => {
       options={{
         tabBarLabel: 'Transfer',
         tabBarIcon: ({ color }) => (
-          // <MaterialCommunityIcons name="account" color={color} size={26} />
-          <Icon name="home" color={color} size={26} />
+          <MaterialCommunityIcons name="account" color={color} size={26} />
+          // <Icon name="home" color={color} size={26} />
         ),
         tabBarColor:"#FF4433",
         headerShown: false
@@ -63,8 +63,8 @@ const Bottomnavigation = () => {
       options={{
         tabBarLabel: 'Card',
         tabBarIcon: ({ color  }) => (
-          // <MaterialCommunityIcons name="account" color={color} size={26} />
-          <Icon name="person" color={color} size={26} />
+          <MaterialCommunityIcons name="account" color={color} size={26} />
+          // <Icon name="person" color={color} size={26} />
         ),
         tabBarColor:"#FF4433"
         // headerShown: false
@@ -76,8 +76,8 @@ const Bottomnavigation = () => {
       options={{
         tabBarLabel: 'History',
         tabBarIcon: ({ color }) => (
-          // <MaterialCommunityIcons name="help-box" color={color} size={26} />
-           <Icon name="help" color={color} size={26} />
+          <MaterialCommunityIcons name="help-box" color={color} size={26} />
+          //  <Icon name="help" color={color} size={26} />
         ),
         tabBarColor:"#FF4433"
       }}
@@ -89,8 +89,8 @@ const Bottomnavigation = () => {
       options={{
         tabBarLabel: 'Profile',
         tabBarIcon: ({ color  }) => (
-          // <MaterialCommunityIcons name="account" color={color} size={26} />
-          <Icon name="person" color={color} size={26} />
+          <MaterialCommunityIcons name="account" color={color} size={26} />
+          // <Icon name="person" color={color} size={26} />
         ),
         tabBarColor:"#FF4433"
         // headerShown: false
