@@ -11,6 +11,7 @@ import {faBuildingColumns} from "@fortawesome/free-solid-svg-icons/faBuildingCol
 import {faPlus}  from "@fortawesome/free-solid-svg-icons/faPlus"
 import {faArrowLeft}  from "@fortawesome/free-solid-svg-icons/faArrowLeft"
 import {faCaretLeft}  from "@fortawesome/free-solid-svg-icons/faCaretLeft"
+import {faChevronRight}  from "@fortawesome/free-solid-svg-icons/faChevronRight"
 const OtherScreeen = () => {
     const navigation = useNavigation()
     useLayoutEffect(()=>{
@@ -37,12 +38,24 @@ const OtherScreeen = () => {
       <TouchableOpacity style={{ flexDirection:'row'}} >
       <View style={styles.container1} ><FontAwesomeIcon icon={faCaretLeft} size={25}/></View>
       <Text style={styles.text} > Buy Airtime</Text>
-      <View><FontAwesomeIcon icon={faCaretLeft} size={25}/></View>
+      <View style={styles.container2}><FontAwesomeIcon icon={faChevronRight} size={20}/></View>
       </TouchableOpacity>
       <TouchableOpacity style={{ flexDirection:'row'}} >
-      <View style={styles.container1}><FontAwesomeIcon icon={faPlus} size={20} /></View>
-      <Text style={styles.text} >Buy Data</Text>
+      <View style={styles.container1} ><FontAwesomeIcon icon={faCaretLeft} size={25}/></View>
+      <Text style={styles.text} > Buy Airtime</Text>
+      <View style={styles.container2}><FontAwesomeIcon icon={faChevronRight} size={20}/></View>
       </TouchableOpacity>
+      <TouchableOpacity style={{ flexDirection:'row'}} >
+      <View style={styles.container1} ><FontAwesomeIcon icon={faCaretLeft} size={25}/></View>
+      <Text style={styles.text} > Buy Airtime</Text>
+      <View style={styles.container2}><FontAwesomeIcon icon={faChevronRight} size={20}/></View>
+      </TouchableOpacity>
+      <TouchableOpacity style={{ flexDirection:'row'}} >
+      <View style={styles.container1} ><FontAwesomeIcon icon={faCaretLeft} size={25}/></View>
+      <Text style={styles.text} > Buy Airtime</Text>
+      <View style={styles.container2}><FontAwesomeIcon icon={faChevronRight} size={20}/></View>
+      </TouchableOpacity>
+      
     </View>
     </View>
     </SafeAreaView>
@@ -66,6 +79,24 @@ const styles = StyleSheet.create({
         borderRadius: 50,
         width: 50,
         height: 50,
+       
+      
+      },
+      container2: {
+        // backgroundColor: 'white',
+        // shadowColor: '#000',
+        // shadowOffset: {
+        //   width: 0,
+        //   height: 3,
+        // },
+        // shadowOpacity: 0.25,
+        // shadowRadius: 3.84,
+        // elevation: 5,
+        marginTop:15,
+        marginLeft:200,
+        // borderRadius: 50,
+        // width: 50,
+        // height: 50,
       
       },
       text:{
