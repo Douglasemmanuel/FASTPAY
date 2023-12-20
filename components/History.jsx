@@ -12,7 +12,7 @@ const History = () => {
   return (
     <View style={styles.curvedView}>
       <View style={{flexDirection:'row'}}>
-      <Text style={{color:'grey' , marginLeft:15 , marginTop:10 , fontSize:15 , fontWeight:'bold' , flex:1}}>Recent Activities</Text>
+      <Text style={{color:'grey' , marginLeft:15 , marginTop:10 , fontSize:15 , fontWeight:'bold' , flex:2.5}}>Recent Activities</Text>
      <TouchableOpacity onPress={move} style={{flex:1}}>
      <Text style={{color:'grey' , marginLeft:15 , marginTop:10 , fontSize:15 , fontWeight:90}}>See All</Text>
      </TouchableOpacity>

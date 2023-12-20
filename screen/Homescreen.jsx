@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
   },
   button: {
     position: 'absolute',
-    bottom: 16,
+    bottom: 8,
     right: 36,
     backgroundColor: 'blue',
     padding: 10,
