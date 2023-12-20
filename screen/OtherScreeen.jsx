@@ -34,9 +34,10 @@ const OtherScreeen = () => {
             </View>
         </View>
       <View style={styles.curvedView}>
-        <TouchableOpacity style={{ flexDirection:'row'}} >
+      <TouchableOpacity style={{ flexDirection:'row'}} >
       <View style={styles.container1} ><FontAwesomeIcon icon={faCaretLeft} size={25}/></View>
       <Text style={styles.text} > Buy Airtime</Text>
+      <View><FontAwesomeIcon icon={faCaretLeft} size={25}/></View>
       </TouchableOpacity>
       <TouchableOpacity style={{ flexDirection:'row'}} >
       <View style={styles.container1}><FontAwesomeIcon icon={faPlus} size={20} /></View>

@@ -56,8 +56,8 @@ const Userinfo = () => {
     },[])
   return (
     <SafeAreaView>
-    <View style={{flexDirection:'row'}}>
-    <View style={{flex:1}}>
+    <View style={{flexDirection:'row' }}>
+    <View style={{flex:4}}>
       <Text style={styles.text}> Hello Doggie</Text>
       <View>
         {isMorning?(

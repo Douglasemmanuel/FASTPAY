@@ -3,11 +3,20 @@ import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import {faWallet} from "@fortawesome/free-solid-svg-icons/faWallet"
+import { TouchableOpacity } from 'react-native'
 const History = () => {
     const navigation = useNavigation()
+    function move(){
+      navigation.navigate('history')
+    }
   return (
     <View style={styles.curvedView}>
-      <Text style={{color:'grey' , marginLeft:15 , marginTop:10 , fontSize:15 , fontWeight:'bold'}}>Recent Activities</Text>
+      <View style={{flexDirection:'row'}}>
+      <Text style={{color:'grey' , marginLeft:15 , marginTop:10 , fontSize:15 , fontWeight:'bold' , flex:1}}>Recent Activities</Text>
+     <TouchableOpacity onPress={move} style={{flex:1}}>
+     <Text style={{color:'grey' , marginLeft:15 , marginTop:10 , fontSize:15 , fontWeight:90}}>See All</Text>
+     </TouchableOpacity>
+      </View>
       <View style={{flexDirection:'row' , marginLeft:15, marginTop:10 }}>
         <View style={styles.container1}><FontAwesomeIcon icon={faWallet} /></View>
         {/* <Text style={{fontWeight:'bold' , fontSize:20 }}>Fast Pay</Text> */}

@@ -5,12 +5,12 @@ import { TouchableWithoutFeedback  , TouchableOpacity} from 'react-native'
 import { Image } from 'react-native'
 const UserImage = () => {
   return (
-  <TouchableOpacity>
+  <TouchableWithoutFeedback>
      <View style={styles.container}>
       {/* <Text>UserImage</Text> */}
-      <Image style={{width:50 , height:50}}/>
+      <Image style={{ borderRadius: 50,width:50 , height:50}} source={require('../images/mansmile.jpg')}/>
     </View>
-  </TouchableOpacity>
+  </TouchableWithoutFeedback>
   )
 }
 
@@ -20,16 +20,18 @@ const styles = StyleSheet.create({
 
   container: {
     // backgroundColor: 'white',
-    // shadowColor: '#000',
-    // shadowOffset: {
-    //   width: 0,
-    //   height: 1,
-    // },
-    // shadowOpacity: 0.25,
-    // shadowRadius: 3.84,
-    // elevation: 5,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
     // padding: 7,
-    borderRadius: 35,
+    // borderRadius: 50,
+    // height:20,
+    // width:20,
 },
 
 })
