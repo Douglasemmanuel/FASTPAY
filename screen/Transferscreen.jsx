@@ -19,8 +19,9 @@ const Transferscreen = () => {
     <SafeAreaView>
     <View>
       <Text>Transferscreen</Text>
+      <Beneficiaries/>
       <View style={styles.curvedView}>
-      <View style={{flexDirection:'row' , marginLeft:15 , marginTop:5 }}>
+      <TouchableOpacity style={{flexDirection:'row' , marginLeft:15 , marginTop:5 }}>
        <View style={{flex:1}}>
        <View style={styles.container1}><FontAwesomeIcon icon={faPaperPlane} size={20} /></View>
        </View>
@@ -31,12 +32,12 @@ const Transferscreen = () => {
         <View style={{ flex:1}}>
         <View style={styles.container2} ><FontAwesomeIcon icon={faChevronRight} size={20}/></View>
         </View>
-      </View>
+      </TouchableOpacity>
     </View>
     <View style={styles.curvedView}>
-      <View style={{flexDirection:'row' , marginLeft:15 , marginTop:5 }}>
+      <TouchableOpacity style={{flexDirection:'row' , marginLeft:15 , marginTop:5 }}>
        <View style={{flex:1}}>
-       <View style={styles.container1}><FontAwesomeIcon icon={faPaperPlane} size={20} /></View>
+       <View style={styles.container1}><FontAwesomeIcon icon={faBuildingColumns} size={20} /></View>
        </View>
        <View style={{  flex:3}}>
        <Text style={{fontWeight:'bold' ,fontSize:15 , paddingTop:4}}>Bank Account</Text>
@@ -45,7 +46,7 @@ const Transferscreen = () => {
         <View style={{ flex:1}}>
         <View style={styles.container2} ><FontAwesomeIcon icon={faChevronRight} size={20}/></View>
         </View>
-      </View>
+      </TouchableOpacity>
     </View>
     </View>
     </SafeAreaView>
