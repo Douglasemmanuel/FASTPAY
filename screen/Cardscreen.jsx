@@ -7,6 +7,7 @@ import { useLayoutEffect } from 'react'
 import { Image } from 'react-native'
 import { useState } from 'react'
 const Cardscreen = () => {
+  const [isShown , notShown] = useState(false)
     const navigation = useNavigation()
     useLayoutEffect(()=>{
       navigation.setOptions({
@@ -17,9 +18,11 @@ const Cardscreen = () => {
     <SafeAreaView>
       <Text>Cardscreen</Text>
       <View style={styles.cardContainer}>
-        <View></View>
       {/* Card Background */}
       <View style={styles.card}>
+        <View>
+          <Text style={{color:'white', fontWeight:'bold' , fontSize:16}}>FastPay</Text>
+        </View>
         {/* Card Logo */}
         <Image
           source={require('../images/mansmile.jpg')}
@@ -32,7 +35,7 @@ const Cardscreen = () => {
 
         {/* Cardholder Name and Expiry */}
         <View style={styles.cardInfoContainer}>
-          <Text style={styles.cardHolderName}>John Doe</Text>
+          <Text style={styles.cardHolderName}>Doggie</Text>
           <Text style={styles.expiry}>Exp: 12/24</Text>
         </View>
       </View>
