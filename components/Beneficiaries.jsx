@@ -10,20 +10,21 @@ const Beneficiaries = () => {
     const navigation = useNavigation()
     function move(){
         navigation.navigate('beneficiaries')
+        console.log('hiii')
     }
   return (
-    <View style={{marginLeft:15 , marginTop:10}}>
+    <View style={{marginLeft:15 , marginTop:20}}>
       {/* <Text>Beneficiaries</Text> */}
       <View style={{flexDirection:'row'}}>
         <View style={{}}>
         <Text style={{fontWeight:'bold' , fontSize:16,  }}> Frequent Beneficiaries</Text>
         </View>
-        <View style={{marginLeft:120 }} onPress={move} >
+        <TouchableOpacity style={{marginLeft:120 }} onPress={move} >
         <Text style={{fontWeight:'bold' , fontSize:16 , color:'grey' }}>View All</Text> 
-        </View>
-        <View style={{marginTop:3  }} onPress={move}> 
+        </TouchableOpacity>
+        <TouchableOpacity style={{marginTop:3  }} onPress={move}> 
             <FontAwesomeIcon icon={faChevronRight} size={15} />
-         </View>
+         </TouchableOpacity>
         </View>
         <View style={{marginTop:20}}>
        <View style={{flexDirection:'row' }}>

@@ -20,7 +20,8 @@ const Transferscreen = () => {
     <View>
       <Text style={{textAlign:'center' , fontWeight:'bold' , fontSize:16}}>Transferscreen</Text>
       <Beneficiaries/>
-      <View style={styles.curvedView}>
+    <View style={{marginTop:40}}>
+    <View style={styles.curvedView}>
       <TouchableOpacity style={{flexDirection:'row' , marginLeft:15 , marginTop:5 }}>
        <View style={{flex:1}}>
        <View style={styles.container1}><FontAwesomeIcon icon={faPaperPlane} size={20} /></View>
@@ -35,7 +36,7 @@ const Transferscreen = () => {
       </TouchableOpacity>
     </View>
     <View style={styles.curvedView}>
-      <TouchableOpacity style={{flexDirection:'row' , marginLeft:15 , marginTop:5 }}>
+      <TouchableOpacity style={{flexDirection:'row' , marginLeft:15 , marginTop:20 }}>
        <View style={{flex:1}}>
        <View style={styles.container1}><FontAwesomeIcon icon={faBuildingColumns} size={20} /></View>
        </View>
@@ -47,6 +48,7 @@ const Transferscreen = () => {
         <View style={styles.container2} ><FontAwesomeIcon icon={faChevronRight} size={20}/></View>
         </View>
       </TouchableOpacity>
+    </View>
     </View>
     </View>
     </SafeAreaView>
