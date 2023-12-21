@@ -20,18 +20,30 @@ const Transferscreen = () => {
     <View>
       <Text>Transferscreen</Text>
       <View style={styles.curvedView}>
-    
-      <View style={{flexDirection:'row' , marginLeft:15, marginTop:10 }}>
-        <View style={styles.container1}><FontAwesomeIcon icon={faPaperPlane} size={20} /></View>
-        {/* <Text style={{fontWeight:'bold' , fontSize:20 }}>Fast Pay</Text> */}
-        {/* marginLeft:15 , */}
-       <View style={{  flex:1}}>
-       <Text style={{fontWeight:'bold' ,fontSize:14}}>FastPay Account</Text>
+      <View style={{flexDirection:'row' , marginLeft:15 , marginTop:5 }}>
+       <View style={{flex:1}}>
+       <View style={styles.container1}><FontAwesomeIcon icon={faPaperPlane} size={20} /></View>
+       </View>
+       <View style={{  flex:3}}>
+       <Text style={{fontWeight:'bold' ,fontSize:15 , paddingTop:4}}>FastPay Account</Text>
         <Text style={{fontSize:12, color:'grey'}}>send to another Fastpay account</Text>
        </View>
         <View style={{ flex:1}}>
-        <View style={styles.container2} ><FontAwesomeIcon icon={faChevronRight} size={30}/></View>
-       
+        <View style={styles.container2} ><FontAwesomeIcon icon={faChevronRight} size={20}/></View>
+        </View>
+      </View>
+    </View>
+    <View style={styles.curvedView}>
+      <View style={{flexDirection:'row' , marginLeft:15 , marginTop:5 }}>
+       <View style={{flex:1}}>
+       <View style={styles.container1}><FontAwesomeIcon icon={faPaperPlane} size={20} /></View>
+       </View>
+       <View style={{  flex:3}}>
+       <Text style={{fontWeight:'bold' ,fontSize:15 , paddingTop:4}}>Bank Account</Text>
+        <Text style={{fontSize:12, color:'grey'}}>send to local Bank Account</Text>
+       </View>
+        <View style={{ flex:1}}>
+        <View style={styles.container2} ><FontAwesomeIcon icon={faChevronRight} size={20}/></View>
         </View>
       </View>
     </View>
@@ -53,18 +65,20 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
-    padding: 15,
+    padding: 11,
     borderRadius: 50,
-    width: 50,
-    height: 50,
+    width: 45,
+    height: 45,
+    marginBottom:5,
+   
   
   },
   curvedView: {
       width: 380,
-      height: 90,
+      height: 100,
       backgroundColor: 'white',
       marginLeft:15,
-      // marginTop:10,
+      marginTop:10,
       justifyContent:'center',
       alignItems:'center' ,
       flexDirection:'row' ,  
@@ -76,10 +90,7 @@ const styles = StyleSheet.create({
       // borderTopLeftRadius:0,
     },
     container2: {
-     
-      marginTop:15,
+      marginTop:10,
       flex:1,
-     
-    
     },
 })
