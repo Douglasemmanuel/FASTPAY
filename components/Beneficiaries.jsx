@@ -5,7 +5,12 @@ import { useNavigation } from '@react-navigation/native'
 import { TouchableOpacity } from 'react-native'
 import {faPlus}  from "@fortawesome/free-solid-svg-icons/faPlus"
 import {faChevronRight}  from "@fortawesome/free-solid-svg-icons/faChevronRight"
+import { Image } from 'react-native'
 const Beneficiaries = () => {
+    const navigation = useNavigation()
+    function move(){
+        navigation.navigate('beneficiaries')
+    }
   return (
     <View style={{marginLeft:15 , marginTop:10}}>
       {/* <Text>Beneficiaries</Text> */}
@@ -13,19 +18,27 @@ const Beneficiaries = () => {
         <View style={{}}>
         <Text style={{fontWeight:'bold' , fontSize:16,  }}> Frequent Beneficiaries</Text>
         </View>
-        <View style={{marginLeft:120 }} >
+        <View style={{marginLeft:120 }} onPress={move} >
         <Text style={{fontWeight:'bold' , fontSize:16 , color:'grey' }}>View All</Text> 
         </View>
-        <View style={{marginTop:3  }}> 
+        <View style={{marginTop:3  }} onPress={move}> 
             <FontAwesomeIcon icon={faChevronRight} size={15} />
          </View>
         </View>
         <View style={{marginTop:20}}>
-       <View style={{flexDirection:'row'}}>
-        <TouchableOpacity>
+       <View style={{flexDirection:'row' }}>
+        <TouchableOpacity >
        <View style={styles.container1} ><FontAwesomeIcon icon={faPlus} size={25} /></View>
-       <Text style={{paddingLeft:5 , marginTop:1}}>Add</Text>
-       <Text style={{paddingLeft:5}}>Beneficiary</Text>
+       <Text style={{marginLeft:5 , marginTop:1 , color:'grey' }}>Add</Text>
+       <Text style={{paddingLeft: 5  , color:'grey'}}>Beneficiary</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={{marginLeft:10}}>
+       {/* <View style={styles.container1} ><FontAwesomeIcon icon={faPlus} size={25} /></View> */}
+       <View>
+       <Image style={{ borderRadius: 50,width:50 , height:50}} source={require('../images/mansmile.jpg')}/>
+       </View>
+       <Text style={{marginLeft:5 , marginTop:1 , color:'grey' }}>Doggie</Text>
+       <Text style={{paddingLeft: 5  , color:'grey'}}>Emma</Text>
         </TouchableOpacity>
        </View>
         </View>
