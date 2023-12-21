@@ -50,8 +50,8 @@ const styles = StyleSheet.create({
   },
   card: {
     backgroundColor: 'blue', // Card background color
-    width: 300,
-    height: 180,
+    width: 380,
+    height: 200,
     borderRadius: 15,
     padding: 20,
   },
