@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native'
+import Beneficiaries from '../components/Beneficiaries'
 const Transferscreen = () => {
   return (
     <SafeAreaView>

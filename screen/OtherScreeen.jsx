@@ -106,7 +106,7 @@ const OtherScreeen = () => {
       </TouchableOpacity>
       <TouchableOpacity style={{ flexDirection:'row'}} >
      <View style={{flex:1}}> 
-     <View style={styles.container1} ><FontAwesomeIcon icon={faPlane} size={25}/></View>
+     <View style={styles.container1} ><FontAwesomeIcon icon={faPlane} size={25} /></View>
      </View>
       <Text style={styles.text} >Travels & Transportation /Logistics</Text>
       <View style={styles.container2}><FontAwesomeIcon icon={faChevronRight} size={20}/></View>

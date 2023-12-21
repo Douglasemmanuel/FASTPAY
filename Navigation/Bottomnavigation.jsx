@@ -7,7 +7,6 @@ import Profilescreen from '../screen/Profilescreen'
 import Cardscreen from '../screen/Cardscreen'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-
 // import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs'
 import Icon from 'react-native-vector-icons/Ionicons'
 // const Tab = createMaterialBottomTabNavigator();
@@ -36,7 +35,7 @@ const Bottomnavigation = () => {
         // tabBarIcon: ({ color, size }) => (
         //   <MaterialCommunityIcons name="home" color={color} size={size} />
         // ),
-        tabBarIcon: ({ color }) => (
+        tabBarIcon: ({ color , size }) => (
           <MaterialCommunityIcons name="home" color={color} size={26} />
           // <Icon name="home" color={color} size={26} />
         ),
