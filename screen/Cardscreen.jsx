@@ -3,9 +3,9 @@ import React from 'react'
 import { SafeAreaView } from 'react-native'
 import { TouchableOpacity } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
-import { TouchableOpacity } from 'react-native'
 import { useLayoutEffect } from 'react'
 import { Image } from 'react-native'
+import { useState } from 'react'
 const Cardscreen = () => {
     const navigation = useNavigation()
     useLayoutEffect(()=>{
@@ -17,11 +17,12 @@ const Cardscreen = () => {
     <SafeAreaView>
       <Text>Cardscreen</Text>
       <View style={styles.cardContainer}>
+        <View></View>
       {/* Card Background */}
       <View style={styles.card}>
         {/* Card Logo */}
         <Image
-          source={require('./path-to-your-logo.png')}
+          source={require('../images/mansmile.jpg')}
           style={styles.logo}
           resizeMode="contain"
         />
