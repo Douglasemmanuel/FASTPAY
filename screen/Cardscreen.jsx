@@ -7,7 +7,10 @@ import { useLayoutEffect } from 'react'
 import { Image } from 'react-native'
 import { useState } from 'react'
 const Cardscreen = () => {
-  const [isShown , notShown] = useState(false)
+  const [isShown , setShow] = useState(true)
+  const toggleComponent =()=>{
+    setShow(!isShown)
+  }
     const navigation = useNavigation()
     useLayoutEffect(()=>{
       navigation.setOptions({
@@ -17,30 +20,47 @@ const Cardscreen = () => {
   return (
     <SafeAreaView>
       <Text>Cardscreen</Text>
-      <View style={styles.cardContainer}>
-      {/* Card Background */}
-      <View style={styles.card}>
-        <View style={{flexDirection:'row'}}>
-          <Text style={{color:'white', fontWeight:'bold' , fontSize:16 , flex:7}}>FastPay</Text>
-          <Text style={{color:'white', fontWeight:'bold' , fontSize:16 , flex:1}}>VISA</Text>
-        </View>
-        {/* Card Logo */}
-        <Image
-          source={require('../images/chip1.png')}
-          style={styles.logo}
-          resizeMode="contain"
-        />
+      {isShown ? 
+       <TouchableOpacity style={styles.cardContainer} onPress={toggleComponent}>
+       {/* Card Background */}
+       <View style={styles.card}>
+         <View style={{flexDirection:'row'}}>
+           <Text style={{color:'white', fontWeight:'bold' , fontSize:16 , flex:7}}>FastPay</Text>
+           <Text style={{color:'white', fontWeight:'bold' , fontSize:16 , flex:1}}>VISA</Text>
+         </View>
+         {/* Card Logo */}
+         <Image
+           source={require('../images/chip1.png')}
+           style={styles.logo}
+           resizeMode="contain"
+         />
+ 
+         {/* Card Number */}
+         <Text style={styles.cardNumber}>1234 5678 9012 3456</Text>
+ 
+         {/* Cardholder Name and Expiry */}
+         <View style={styles.cardInfoContainer}>
+           <Text style={styles.cardHolderName}>Doggie</Text>
+           <Text style={styles.expiry}>Exp: 12/28</Text>
+         </View>
+       </View>
+     </TouchableOpacity>
+     
+     :
+    <TouchableOpacity style={styles.cardContainerBack} onPress={toggleComponent}>
+      {/* Card Back */}
+      <View style={styles.cardBack}>
+        {/* Magnetic Stripe */}
+        <View style={styles.magneticStripe}></View>
 
-        {/* Card Number */}
-        <Text style={styles.cardNumber}>1234 5678 9012 3456</Text>
-
-        {/* Cardholder Name and Expiry */}
-        <View style={styles.cardInfoContainer}>
-          <Text style={styles.cardHolderName}>Doggie</Text>
-          <Text style={styles.expiry}>Exp: 12/28</Text>
+        {/* CVV */}
+        <View style={styles.cvvContainer}>
+          <Text style={styles.cvvLabel}>CVV</Text>
+          <Text style={styles.cvvNumber}>123</Text>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
+    }
     </SafeAreaView>
   )
 }
@@ -80,6 +100,34 @@ const styles = StyleSheet.create({
   },
   expiry: {
     color: 'white',
+    fontSize: 16,
+  },
+  cardContainerBack: {
+    alignItems: 'center',
+    marginTop: 50,
+  },
+  cardBack: {
+    backgroundColor: 'white', // Card back background color
+    width: 380,
+    height: 200,
+    borderRadius: 15,
+    padding: 20,
+  },
+  magneticStripe: {
+    backgroundColor: 'black', // Magnetic stripe color
+    height: 20,
+    marginBottom: 20,
+  },
+  cvvContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  cvvLabel: {
+    color: 'black',
+    fontSize: 16,
+  },
+  cvvNumber: {
+    color: 'black',
     fontSize: 16,
   },
 })
