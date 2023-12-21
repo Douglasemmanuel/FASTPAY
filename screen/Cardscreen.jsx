@@ -20,12 +20,13 @@ const Cardscreen = () => {
       <View style={styles.cardContainer}>
       {/* Card Background */}
       <View style={styles.card}>
-        <View>
-          <Text style={{color:'white', fontWeight:'bold' , fontSize:16}}>FastPay</Text>
+        <View style={{flexDirection:'row'}}>
+          <Text style={{color:'white', fontWeight:'bold' , fontSize:16 , flex:7}}>FastPay</Text>
+          <Text style={{color:'white', fontWeight:'bold' , fontSize:16 , flex:1}}>VISA</Text>
         </View>
         {/* Card Logo */}
         <Image
-          source={require('../images/mansmile.jpg')}
+          source={require('../images/chip1.png')}
           style={styles.logo}
           resizeMode="contain"
         />
@@ -36,7 +37,7 @@ const Cardscreen = () => {
         {/* Cardholder Name and Expiry */}
         <View style={styles.cardInfoContainer}>
           <Text style={styles.cardHolderName}>Doggie</Text>
-          <Text style={styles.expiry}>Exp: 12/24</Text>
+          <Text style={styles.expiry}>Exp: 12/28</Text>
         </View>
       </View>
     </View>
@@ -62,6 +63,7 @@ const styles = StyleSheet.create({
     width: 60,
     height: 40,
     marginBottom: 10,
+    marginTop:10,
   },
   cardNumber: {
     color: 'white',
