@@ -22,3 +22,4 @@
 <FontAwesomeIcon icon={faPlane} />
 <FontAwesomeIcon icon={faSnowflake} />
 <FontAwesomeIcon icon={faArrowDown} />
+<FontAwesomeIcon icon={faCheck} />
