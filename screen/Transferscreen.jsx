@@ -18,7 +18,7 @@ const Transferscreen = () => {
   return (
     <SafeAreaView>
     <View>
-      <Text>Transferscreen</Text>
+      <Text style={{textAlign:'center' , fontWeight:'bold' , fontSize:16}}>Transferscreen</Text>
       <Beneficiaries/>
       <View style={styles.curvedView}>
       <TouchableOpacity style={{flexDirection:'row' , marginLeft:15 , marginTop:5 }}>

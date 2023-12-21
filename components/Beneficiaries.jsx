@@ -7,8 +7,8 @@ import {faPlus}  from "@fortawesome/free-solid-svg-icons/faPlus"
 import {faChevronRight}  from "@fortawesome/free-solid-svg-icons/faChevronRight"
 const Beneficiaries = () => {
   return (
-    <View style={{marginLeft:15}}>
-      <Text>Beneficiaries</Text>
+    <View style={{marginLeft:15 , marginTop:10}}>
+      {/* <Text>Beneficiaries</Text> */}
       <View style={{flexDirection:'row'}}>
         <View style={{}}>
         <Text style={{fontWeight:'bold' , fontSize:16,  }}> Frequent Beneficiaries</Text>
@@ -21,7 +21,13 @@ const Beneficiaries = () => {
          </View>
         </View>
         <View style={{marginTop:20}}>
-        <View style={styles.container1} ><FontAwesomeIcon icon={faPlus} size={25} /></View>
+       <View style={{flexDirection:'row'}}>
+        <TouchableOpacity>
+       <View style={styles.container1} ><FontAwesomeIcon icon={faPlus} size={25} /></View>
+       <Text style={{paddingLeft:5 , marginTop:1}}>Add</Text>
+       <Text style={{paddingLeft:5}}>Beneficiary</Text>
+        </TouchableOpacity>
+       </View>
         </View>
     </View>
   )
