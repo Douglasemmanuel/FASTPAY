@@ -31,17 +31,18 @@ const OtherScreeen = () => {
       })
   },[])
   function move(){
-    // navigation.goBack()
-    navigation.canGoBack()
+    navigation.goBack()
+    console.log('hiii')
+    // navigation.canGoBack()
     // navigation.navigate('home')
   }
   return (
     <SafeAreaView>
         <View>
         <View style={{flexDirection:'row'}} onPress={move}>
-            <View style={{marginTop:5  , marginLeft:15}} onPress={move}>
+            <TouchableOpacity style={{marginTop:5  , marginLeft:15}} onPress={move}>
             <FontAwesomeIcon icon={faArrowLeft} size={30}  />
-            </View>
+            </TouchableOpacity>
             <View style={{marginLeft:10}}>
             <Text style={{fontWeight:'bold' , fontSize:30}}>Payments</Text>
             </View>
