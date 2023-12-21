@@ -20,3 +20,5 @@
 <FontAwesomeIcon icon={faArrowRight} />
 <FontAwesomeIcon icon={faCaretLeft} />
 <FontAwesomeIcon icon={faPlane} />
+<FontAwesomeIcon icon={faSnowflake} />
+<FontAwesomeIcon icon={faArrowDown} />
