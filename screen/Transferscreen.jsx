@@ -36,7 +36,7 @@ const Transferscreen = () => {
       </TouchableOpacity>
     </View>
     <View style={styles.curvedView}>
-      <TouchableOpacity style={{flexDirection:'row' , marginLeft:15 , marginTop:20 }}>
+      <TouchableOpacity style={{flexDirection:'row' , marginLeft:15 , marginTop:10 }}>
        <View style={{flex:1}}>
        <View style={styles.container1}><FontAwesomeIcon icon={faBuildingColumns} size={20} /></View>
        </View>
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
       height: 100,
       backgroundColor: 'white',
       marginLeft:15,
-      marginTop:10,
+      marginTop:30,
       justifyContent:'center',
       alignItems:'center' ,
       flexDirection:'row' ,  
