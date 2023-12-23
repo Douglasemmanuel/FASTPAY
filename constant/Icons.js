@@ -23,3 +23,5 @@
 <FontAwesomeIcon icon={faSnowflake} />
 <FontAwesomeIcon icon={faArrowDown} />
 <FontAwesomeIcon icon={faCheck} />
+<FontAwesomeIcon icon={faEllipsis} />
+<FontAwesomeIcon icon={faClipboard} />

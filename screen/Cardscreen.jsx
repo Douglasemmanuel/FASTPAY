@@ -9,6 +9,8 @@ import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import {faPlus}  from "@fortawesome/free-solid-svg-icons/faPlus"
 import {faSnowflake}  from "@fortawesome/free-solid-svg-icons/faSnowflake"
+import {faEllipsis}  from "@fortawesome/free-solid-svg-icons/faEllipsis"
+import {faClipboard}  from "@fortawesome/free-solid-svg-icons/faClipboard"
 const Cardscreen = () => {
   const [isShown , setShow] = useState(true)
   const toggleComponent =()=>{
@@ -26,7 +28,7 @@ const Cardscreen = () => {
   },[])
   return (
     <SafeAreaView>
-      <Text style={{fontSize:20 , fontWeight:'bold'}}>Cards</Text>
+      <Text style={{fontSize:30 , fontWeight:'bold' , marginLeft:15}}>Cards</Text>
      <View style={{marginTop:10}}>
      {isShown ? 
        <FrontCard/>
@@ -34,22 +36,23 @@ const Cardscreen = () => {
     <BackCard/>
     }
      </View>
-     <View style={{marginTop:20 , marginLeft:15}}>
-       <View style={{flexDirection:'row' }}>
-        <TouchableOpacity >
+     <View style={{marginTop:20  }}>
+       <View style={{flexDirection:'row', rowGap:50 , marginLeft:80  }}>
+        <TouchableOpacity  >
        <View style={styles.container1} ><FontAwesomeIcon icon={faPlus} size={25} /></View>
-       <Text style={{marginLeft:5 , marginTop:1 , color:'grey' , fontWeight:80 }}>Add Money</Text>
+       <Text style={{marginLeft:2 , marginTop:10 , color:'black' , fontWeight:'bold' }}>Add Money</Text>
         </TouchableOpacity>
-        <TouchableOpacity >
-       <View style={styles.container1} ><FontAwesomeIcon icon={faPlus} size={25} /></View>
-       <Text style={{marginLeft:5 , marginTop:1 , color:'grey' , fontWeight:80 }}>Freeze Card</Text>
+        <TouchableOpacity  style={{marginLeft:20}} >
+       <View style={styles.container1} ><FontAwesomeIcon icon={faSnowflake} size={25} /></View>
+       <Text style={{marginLeft:2 , marginTop:10 , color:'black' , fontWeight:'bold' }}>Freeze Card</Text>
         </TouchableOpacity>
-        <TouchableOpacity >
-       <View style={styles.container1} ><FontAwesomeIcon icon={faPlus} size={25} /></View>
-       <Text style={{marginLeft:5 , marginTop:1 , color:'grey' , fontWeight:80 }}>More</Text>
+        <TouchableOpacity   style={{marginLeft:20}} >
+       <View style={styles.container1} ><FontAwesomeIcon icon={faEllipsis} size={25} /></View>
+       <Text style={{marginLeft:10 , marginTop:10, color:'black' , fontWeight:'bold' }}>More</Text>
         </TouchableOpacity>
        </View>
         </View>
+        <CardDetails/>
     
     </SafeAreaView>
   )
@@ -112,20 +115,20 @@ const CardDetails=()=>{
     <View style={styles.curvedView}>
       <Text style={{fontWeight:'bold' , fontSize:18}}>Your Card Details</Text>
       <View>
-        <Text>Card Name</Text>
-        <View style={{flexDirection:'row'}}>
-        <Text>DOUGGIE</Text>
+        <Text style={{ fontSize:18 , color:'black'}}>Card Name</Text>
+        <View style={{flexDirection:'row' , rowGap:20}}>
+        <Text style={{fontWeight:'bold' , fontSize:18 , color:'black'}}>DOUGGIE</Text>
         <TouchableOpacity >
-       <View style={styles.container1} ><FontAwesomeIcon icon={faPlus} size={25} /></View>
+       <View style={styles.container1} ><FontAwesomeIcon icon={faClipboard} size={25} /></View>
         </TouchableOpacity>
         </View>
       </View>
       <View>
         <Text>Card Number</Text>
         <View style={{flexDirection:'row'}}>
-        <Text>DOUGGIE</Text>
+        <Text>510040*******9822</Text>
         <TouchableOpacity >
-       <View style={styles.container1} ><FontAwesomeIcon icon={faPlus} size={25} /></View>
+       <View style={styles.container1} ><FontAwesomeIcon icon={faClipboard} size={25} /></View>
         </TouchableOpacity>
         </View>
       </View>
@@ -193,6 +196,7 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     width: 50,
     height: 50,
+    marginLeft:5,
    
   
   },
@@ -257,5 +261,12 @@ const styles = StyleSheet.create({
   cvvNumber: {
     color: 'black',
     fontSize: 16,
+  },
+  curvedView: {
+    marginTop:10,
+    width: 350,
+    height: 100,
+    backgroundColor: 'white',
+    borderRadius: 20, // Adjust this value for the desired curve
   },
 })
