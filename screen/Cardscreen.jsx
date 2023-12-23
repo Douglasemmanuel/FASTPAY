@@ -6,10 +6,17 @@ import { useNavigation } from '@react-navigation/native'
 import { useLayoutEffect } from 'react'
 import { Image } from 'react-native'
 import { useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
+import {faPlus}  from "@fortawesome/free-solid-svg-icons/faPlus"
+import {faSnowflake}  from "@fortawesome/free-solid-svg-icons/faSnowflake"
 const Cardscreen = () => {
   const [isShown , setShow] = useState(true)
   const toggleComponent =()=>{
     setShow(!isShown)
+  }
+  const [vissible , setVissible] = useState(true)
+  const toggleComponentDisplay =()=>{
+    setVissible(!vissible)
   }
     const navigation = useNavigation()
     useLayoutEffect(()=>{
@@ -19,9 +26,42 @@ const Cardscreen = () => {
   },[])
   return (
     <SafeAreaView>
-      <Text>Cardscreen</Text>
-      {isShown ? 
-       <TouchableOpacity style={styles.cardContainer} onPress={toggleComponent}>
+      <Text style={{fontSize:20 , fontWeight:'bold'}}>Cards</Text>
+     <View style={{marginTop:10}}>
+     {isShown ? 
+       <FrontCard/>
+     :
+    <BackCard/>
+    }
+     </View>
+     <View style={{marginTop:20 , marginLeft:15}}>
+       <View style={{flexDirection:'row' }}>
+        <TouchableOpacity >
+       <View style={styles.container1} ><FontAwesomeIcon icon={faPlus} size={25} /></View>
+       <Text style={{marginLeft:5 , marginTop:1 , color:'grey' , fontWeight:80 }}>Add Money</Text>
+        </TouchableOpacity>
+        <TouchableOpacity >
+       <View style={styles.container1} ><FontAwesomeIcon icon={faPlus} size={25} /></View>
+       <Text style={{marginLeft:5 , marginTop:1 , color:'grey' , fontWeight:80 }}>Freeze Card</Text>
+        </TouchableOpacity>
+        <TouchableOpacity >
+       <View style={styles.container1} ><FontAwesomeIcon icon={faPlus} size={25} /></View>
+       <Text style={{marginLeft:5 , marginTop:1 , color:'grey' , fontWeight:80 }}>More</Text>
+        </TouchableOpacity>
+       </View>
+        </View>
+    
+    </SafeAreaView>
+  )
+}
+const FrontCard =()=>{
+  const [isShown , setShow] = useState(true)
+  const toggleComponent =()=>{
+    setShow(!isShown)
+  }
+  return (
+    <View>
+        <TouchableOpacity style={styles.cardContainer} onPress={toggleComponent}>
        {/* Card Background */}
        <View style={styles.card}>
          <View style={{flexDirection:'row'}}>
@@ -45,9 +85,13 @@ const Cardscreen = () => {
          </View>
        </View>
      </TouchableOpacity>
-     
-     :
-    <TouchableOpacity style={styles.cardContainerBack} onPress={toggleComponent}>
+    </View>
+  )
+}
+const BackCard=()=>{
+  return (
+    <View>
+      <TouchableOpacity style={styles.cardContainerBack} onPress={toggleComponent}>
       {/* Card Back */}
       <View style={styles.cardBack}>
         {/* Magnetic Stripe */}
@@ -60,14 +104,98 @@ const Cardscreen = () => {
         </View>
       </View>
     </TouchableOpacity>
-    }
-    </SafeAreaView>
+    </View>
   )
 }
-
+const CardDetails=()=>{
+  return (
+    <View style={styles.curvedView}>
+      <Text style={{fontWeight:'bold' , fontSize:18}}>Your Card Details</Text>
+      <View>
+        <Text>Card Name</Text>
+        <View style={{flexDirection:'row'}}>
+        <Text>DOUGGIE</Text>
+        <TouchableOpacity >
+       <View style={styles.container1} ><FontAwesomeIcon icon={faPlus} size={25} /></View>
+        </TouchableOpacity>
+        </View>
+      </View>
+      <View>
+        <Text>Card Number</Text>
+        <View style={{flexDirection:'row'}}>
+        <Text>DOUGGIE</Text>
+        <TouchableOpacity >
+       <View style={styles.container1} ><FontAwesomeIcon icon={faPlus} size={25} /></View>
+        </TouchableOpacity>
+        </View>
+      </View>
+      <View style={styles.container3}>
+        <Text>Show all</Text>
+      </View>
+    </View>
+  )
+}
+const showall =()=>{
+  return (
+    <View style={styles.curvedView}>
+    <Text>Your Card Details</Text>
+    <View>
+      <Text>Card Name</Text>
+      <View style={{flexDirection:'row'}}>
+      <Text>DOUGGIE</Text>
+      <TouchableOpacity >
+     <View style={styles.container1} ><FontAwesomeIcon icon={faPlus} size={25} /></View>
+      </TouchableOpacity>
+      </View>
+    </View>
+    <View>
+      <Text style={{color:'grey' , fontSize:16 , fontWeight:80}}>Card Number</Text>
+      <View style={{flexDirection:'row'}}>
+      <Text>510040*******9822</Text>
+      <TouchableOpacity >
+     <View style={styles.container1} ><FontAwesomeIcon icon={faPlus} size={25} /></View>
+      </TouchableOpacity>
+      </View>
+    </View>
+    <View>
+      <Text>CV</Text>
+      <View style={{flexDirection:'row'}}>
+      <Text>123</Text>
+      <TouchableOpacity >
+     <View style={styles.container1} ><FontAwesomeIcon icon={faPlus} size={25} /></View>
+      </TouchableOpacity>
+      </View>
+    </View> 
+    <View>
+        <Text>Expiry Date</Text>
+        <View style={{flexDirection:'row'}}>
+        <Text>12/26</Text>
+       
+        </View>
+      </View> 
+  </View>
+  )
+}
 export default Cardscreen
 
 const styles = StyleSheet.create({
+  container1: {
+    backgroundColor: 'white',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+    padding: 12,
+    borderRadius: 50,
+    width: 50,
+    height: 50,
+   
+  
+  },
   cardContainer: {
     alignItems: 'center',
     marginTop: 50,
