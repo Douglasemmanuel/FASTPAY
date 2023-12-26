@@ -28,3 +28,6 @@
  <FontAwesomeIcon icon={faCircleChevronRight} />
  <FontAwesomeIcon icon={faMessage} />
  <FontAwesomeIcon icon={faLock} />
+ <FontAwesomeIcon icon={faArrowRightFromBracket} />
+ <FontAwesomeIcon icon={faKey} />
+ <FontAwesomeIcon icon={faShield} />

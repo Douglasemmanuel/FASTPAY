@@ -53,11 +53,17 @@ const AccountBalance=()=>{
 }
 const Accounticon =()=>{
   return(
-    <View style={{flexDirection:'row'}}>
+    <View style={{flexDirection:'row' }}>
         <TouchableOpacity style={styles.container3}>
           <View style={{flexDirection:'row'}}>
-            <View style={{marginTop:5}}><FontAwesomeIcon icon={faMessage} size={20} /></View>
-          <Text style={{fontWeight:'bold' , fontSize:20 ,color:'black' }}>Statement</Text>
+            <View style={{marginTop:8 , marginLeft:5}}><FontAwesomeIcon icon={faMessage} size={20} /></View>
+          <Text style={{fontWeight:'bold' , fontSize:20 ,color:'black', marginLeft:5 , marginTop:5 }}>Statement</Text>
+          </View>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.container34}>
+          <View style={{flexDirection:'row'}}>
+            <View style={{marginTop:5 , marginLeft:5}}><FontAwesomeIcon icon={faLock} size={20} /></View>
+          <Text style={{fontWeight:'bold' , fontSize:20 ,color:'black' , marginTop:5 , marginLeft:5 }}>Lock</Text>
           </View>
             </TouchableOpacity>
     </View>
@@ -65,7 +71,7 @@ const Accounticon =()=>{
 }
 const Account=()=>{
   return (
-    <View  style={{marginTop:30}}>
+    <View  style={{marginTop:40}}>
       <Text style={{fontWeight:'bold' , fontSize:20 , color:'black' , marginLeft:10}}>Account Credentials</Text>
       <View style={styles.curvedView3}>
        <View style={{marginLeft:10 , marginTop:10}}>
@@ -75,7 +81,7 @@ const Account=()=>{
         <View style={styles.container4} ><FontAwesomeIcon icon={faClipboard} size={20} /></View>
          </TouchableOpacity>
        </View>
-        <Text style={{fontSize:15}}>Doggie</Text>
+        <View><Text style={{fontSize:15}}>Doggie</Text></View>
         <View style={{marginTop:20}}>
           <Text style={{color:'grey' ,  fontSize:16}}>Account number</Text>
           <Text style={{fontSize:15}}>0123456789</Text>
@@ -174,7 +180,7 @@ const styles = StyleSheet.create({
     borderRadius: 5, // Adjust this value for the desired curve
   },
   curvedView3: {
-    // marginTop:10,
+    marginTop:10,
     // marginBottom:30,
     width: 380,
     height: 130,
@@ -211,12 +217,27 @@ container3: {
   borderRadius: 50,
   width: 150,
   height: 45,
-  marginLeft:150,
+  // marginLeft:150,
   marginTop:20,
-  justifyContent:'center',
-  alignItems:'center',
-  textAlign:'center'
-  
+ 
+},
+container34: {
+  backgroundColor: 'white',
+  shadowColor: '#000',
+  shadowOffset: {
+    width: 0,
+    height: 3,
+  },
+  shadowOpacity: 0.25,
+  shadowRadius: 3.84,
+  elevation: 5,
+  padding: 5,
+  borderRadius: 50,
+  width: 100,
+  height: 45,
+  marginLeft:10,
+  marginTop:20,
+ 
 },
   container4: {
     backgroundColor: 'white',
