@@ -18,6 +18,7 @@ import OtherAccountscreen from "../screen/OtherAccountscreen";
 import CardTransactionscreen from "../screen/CardTransactionscreen";
 import BankTransferscreen from "../screen/BankTransferscreen";
 import Historyscreen from "../screen/Historyscreen";
+import Profilescreen from "../screen/Profilescreen";
 const Stack = createStackNavigator()
 export default function Navigation(){
     const onboard = useSelector((state)=> state.onboard)
@@ -49,6 +50,7 @@ export default function Navigation(){
                 <Stack.Screen  name='cardtransactions'  component={CardTransactionscreen}/>
                 <Stack.Screen name='banktransfer' component={BankTransferscreen} />
                 <Stack.Screen  name='history' component={Historyscreen}/>
+                <Stack.Screen name='profile' component={Profilescreen} />
                 </>
                 ):(
                     <>

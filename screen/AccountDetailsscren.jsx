@@ -27,12 +27,14 @@ const AccountDetailsscren = () => {
       <View style={{marginLeft:15}}>
       <View style={{flexDirection:'row'}} onPress={move}>
             <TouchableOpacity style={{marginTop:5  , marginLeft:15}} onPress={move}>
-            <FontAwesomeIcon icon={faArrowLeft} size={30}  />
+            <FontAwesomeIcon icon={faArrowLeft} size={20}  />
             </TouchableOpacity>
             <View style={{marginLeft:10}}>
-            <Text style={{fontWeight:'bold' , fontSize:30}}>Account Details</Text>
+            <Text style={{fontWeight:'bold' , fontSize:18 , textAlign:'center'}}>Account Details</Text>
             </View>
       </View>
+      <AccountBalance/>
+      <Accounticon/>
       <Account/>
       <History/>
       <Card/>
@@ -40,20 +42,35 @@ const AccountDetailsscren = () => {
   </SafeAreaView>
   )
 }
+const AccountBalance=()=>{
+  return (
+    <View  style={{marginTop:20 , flexDirection:'row'}}>
+      <Text style={{fontSize:16, fontWeight:'bold' , marginTop:15}}> {'\u20A6'}</Text>
+        <Text style={{fontSize:40, fontWeight:'bold'}}>50000.00</Text>
+    </View>
+  )
+}
+const Accounticon =()=>{
+  return(
+    <View>
+
+    </View>
+  )
+}
 const Account=()=>{
   return (
-    <View >
+    <View  style={{marginTop:30}}>
       <Text style={{fontWeight:'bold' , fontSize:20 , color:'black' , marginLeft:10}}>Account Credentials</Text>
-      <View style={styles.curvedView}>
-       <View style={{marginLeft:10}}>
+      <View style={styles.curvedView3}>
+       <View style={{marginLeft:10 , marginTop:10}}>
        <View style={{flexDirection:'row'}}>
        <Text style={{color:'grey' , flex:3 , fontSize:16}}>Beneficiary</Text>
        <TouchableOpacity style={{flex:1}} >
-        <View style={styles.container4} ><FontAwesomeIcon icon={faClipboard} size={15} /></View>
+        <View style={styles.container4} ><FontAwesomeIcon icon={faClipboard} size={20} /></View>
          </TouchableOpacity>
        </View>
         <Text style={{fontSize:15}}>Doggie</Text>
-        <View>
+        <View style={{marginTop:20}}>
           <Text style={{color:'grey' ,  fontSize:16}}>Account number</Text>
           <Text style={{fontSize:15}}>0123456789</Text>
         </View>
@@ -68,11 +85,12 @@ const History=()=>{
     navigation.navigate('history')
   }
   return (
-    <View>
-    <View style={{flexDirection:'row' , marginLeft:10}}>
+    <View style={{marginTop:10}}>
+   {/* <Text>hiiuii</Text> */}
+   <View style={{flexDirection:'row' , marginLeft:10}}>
     <Text style={{fontWeight:'bold' , fontSize:20 , color:'black' , flex:4}}>Account History</Text>
-    <Text style={{color:'grey' , fontSize:15 , flex:1 , marginTop:5}}>See more</Text>
-    <TouchableOpacity style={{flex:1 , marginTop:5}} onPress={move}><FontAwesomeIcon icon={faChevronRight} size={18}/></TouchableOpacity>
+    <Text style={{color:'grey' , fontSize:15 , flex:1 }}>See more</Text>
+    <TouchableOpacity style={{flex:1 }} onPress={move}><FontAwesomeIcon icon={faChevronRight} size={18}/></TouchableOpacity>
     </View>
       <View style={styles.curvedView}>
        <View style={{marginLeft:10 , marginTop:10}}>
@@ -91,7 +109,7 @@ const History=()=>{
        </View>
       
        <View style={{flex:2}}>
-        <Text style={{color:'red' , fontSize:16 , fontWeight:'bold'}}>1000.00</Text>
+        <Text style={{color:'black' , fontSize:16 , fontWeight:'bold'}}>-1000.00</Text>
        <Text  style={{color:'grey' , paddingTop:3 , fontSize:12 , paddingLeft:5}}> From .1823</Text>
        </View>
       </View>
@@ -106,7 +124,7 @@ const Card =()=>{
     navigation.navigate('card')
   }
   return (
-    <View>
+    <View style={{marginTop:10}}> 
     <Text style={{fontWeight:'bold' , fontSize:20 , color:'black' }}>Card</Text>
    
       <View style={styles.curvedView2}>
@@ -134,16 +152,26 @@ export default AccountDetailsscren
 const styles = StyleSheet.create({
   curvedView: {
     // marginTop:10,
-    width: 350,
+    // marginBottom:30,
+    width: 380,
     height: 100,
     backgroundColor: 'white',
     // marginLeft:10,
     borderRadius: 5, // Adjust this value for the desired curve
   },
   curvedView2: {
-    // marginTop:10,
-    width: 350,
+    marginTop:10,
+    width: 380,
     height: 60,
+    backgroundColor: 'white',
+    // marginLeft:10,
+    borderRadius: 5, // Adjust this value for the desired curve
+  },
+  curvedView3: {
+    // marginTop:10,
+    // marginBottom:30,
+    width: 380,
+    height: 130,
     backgroundColor: 'white',
     // marginLeft:10,
     borderRadius: 5, // Adjust this value for the desired curve
@@ -173,10 +201,10 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
-    padding: 5,
+    padding: 10,
     borderRadius: 50,
-    width: 24,
-    height: 24,
+    width: 40,
+    height: 40,
     marginLeft:5,
   },
 })

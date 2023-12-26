@@ -3,6 +3,7 @@ import React from 'react'
 import { SafeAreaView } from 'react-native'
 import { useLayoutEffect } from 'react'
 import { useNavigation } from '@react-navigation/native'
+import { TouchableOpacity } from 'react-native'
 const Profilescreen = () => {
   const navigation = useNavigation()
   useLayoutEffect(()=>{

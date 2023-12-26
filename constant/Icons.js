@@ -26,3 +26,4 @@
 <FontAwesomeIcon icon={faEllipsis} />
 <FontAwesomeIcon icon={faClipboard} />
  <FontAwesomeIcon icon={faCircleChevronRight} />
+ <FontAwesomeIcon icon={faMessage} />
