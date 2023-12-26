@@ -27,3 +27,4 @@
 <FontAwesomeIcon icon={faClipboard} />
  <FontAwesomeIcon icon={faCircleChevronRight} />
  <FontAwesomeIcon icon={faMessage} />
+ <FontAwesomeIcon icon={faLock} />

@@ -11,7 +11,8 @@ import {faClipboard}  from "@fortawesome/free-solid-svg-icons/faClipboard"
 import {faChevronRight}  from "@fortawesome/free-solid-svg-icons/faChevronRight"
 import {faCircleChevronRight} from "@fortawesome/free-solid-svg-icons/faCircleChevronRight"
 import {faCreditCard} from "@fortawesome/free-solid-svg-icons/faCreditCard"
-
+import {faMessage} from "@fortawesome/free-solid-svg-icons/faMessage"
+import {faLock} from "@fortawesome/free-solid-svg-icons/faLock"
 const AccountDetailsscren = () => {
   const navigation = useNavigation()
     useLayoutEffect(()=>{
@@ -29,7 +30,7 @@ const AccountDetailsscren = () => {
             <TouchableOpacity style={{marginTop:5  , marginLeft:15}} onPress={move}>
             <FontAwesomeIcon icon={faArrowLeft} size={20}  />
             </TouchableOpacity>
-            <View style={{marginLeft:10}}>
+            <View style={{marginLeft:10 , marginTop:2}}>
             <Text style={{fontWeight:'bold' , fontSize:18 , textAlign:'center'}}>Account Details</Text>
             </View>
       </View>
@@ -52,8 +53,13 @@ const AccountBalance=()=>{
 }
 const Accounticon =()=>{
   return(
-    <View>
-
+    <View style={{flexDirection:'row'}}>
+        <TouchableOpacity style={styles.container3}>
+          <View style={{flexDirection:'row'}}>
+            <View style={{marginTop:5}}><FontAwesomeIcon icon={faMessage} size={20} /></View>
+          <Text style={{fontWeight:'bold' , fontSize:20 ,color:'black' }}>Statement</Text>
+          </View>
+            </TouchableOpacity>
     </View>
   )
 }
@@ -190,6 +196,27 @@ const styles = StyleSheet.create({
     borderRadius: 35,
     height:50,
     width:50,
+},
+container3: {
+  backgroundColor: 'white',
+  shadowColor: '#000',
+  shadowOffset: {
+    width: 0,
+    height: 3,
+  },
+  shadowOpacity: 0.25,
+  shadowRadius: 3.84,
+  elevation: 5,
+  padding: 5,
+  borderRadius: 50,
+  width: 150,
+  height: 45,
+  marginLeft:150,
+  marginTop:20,
+  justifyContent:'center',
+  alignItems:'center',
+  textAlign:'center'
+  
 },
   container4: {
     backgroundColor: 'white',
