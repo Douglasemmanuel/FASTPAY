@@ -33,6 +33,7 @@ const AccountDetailsscren = () => {
       </View>
       <Account/>
       <History/>
+      <Card/>
     </View>
   </SafeAreaView>
   )
@@ -60,12 +61,16 @@ const Account=()=>{
   )
 }
 const History=()=>{
+  const navigation = useNavigation()
+  function move(){
+    navigation.navigate('history')
+  }
   return (
     <View>
     <View style={{flexDirection:'row' , marginLeft:10}}>
     <Text style={{fontWeight:'bold' , fontSize:20 , color:'black' , flex:4}}>Account History</Text>
     <Text style={{color:'grey' , fontSize:15 , flex:1 , marginTop:5}}>See more</Text>
-    <TouchableOpacity style={{flex:1 , marginTop:5}}><FontAwesomeIcon icon={faChevronRight} size={18}/></TouchableOpacity>
+    <TouchableOpacity style={{flex:1 , marginTop:5}} onPress={move}><FontAwesomeIcon icon={faChevronRight} size={18}/></TouchableOpacity>
     </View>
       <View style={styles.curvedView}>
        <View style={{marginLeft:10 , marginTop:10}}>
@@ -78,17 +83,43 @@ const History=()=>{
       <FontAwesomeIcon icon={faCircleChevronRight} size={25}  color='red' />
       </View>
       </View>
-        {/* <Text style={{fontWeight:'bold' , fontSize:20 }}>Fast Pay</Text> */}
        <View style={{flex:2.5}}>
        <Text style={{color:'black' ,fontSize:18 , marginTop:2}}>Doggie</Text>
         <Text style={{fontSize:12, color:'grey' , marginTop:5}}>Transfer</Text>
        </View>
-        {/* <View style={{borderRadius:50 ,backgroundColor:'black' , width:50 , height:20  , marginLeft:100 }}>
-        <Text style={{color:'white' , paddingTop:3 , fontWeight:'bold', fontSize:12 , paddingLeft:5}}>{'\u20A6'}0.00</Text>
-        </View> */}
+      
        <View style={{flex:2}}>
         <Text style={{color:'red' , fontSize:16 , fontWeight:'bold'}}>1000.00</Text>
        <Text  style={{color:'grey' , paddingTop:3 , fontSize:12 , paddingLeft:5}}> From .1823</Text>
+       </View>
+      </View>
+       </View>
+      </View>
+    </View>
+  )
+}
+const Card =()=>{
+  const navigation = useNavigation()
+  function move(){
+    navigation.navigate('card')
+  }
+  return (
+    <View>
+    <Text style={{fontWeight:'bold' , fontSize:20 , color:'black' }}>Card</Text>
+   
+      <View style={styles.curvedView2}>
+       <View style={{marginLeft:10 , marginTop:2}}>
+       <View style={{flexDirection:'row' , marginLeft:10, marginTop:10 }}>
+      <View style={{flex:1}}>
+     
+      </View>
+       <View style={{flex:2.5}}>
+       <Text style={{color:'black' ,fontSize:18 , marginTop:2}}>Card</Text>
+        <Text style={{fontSize:12, color:'grey' , marginTop:5}}>Debit card</Text>
+       </View>
+      
+       <View style={{flex:2 , marginTop:15}}>
+       <FontAwesomeIcon icon={faChevronRight} size={15}  />
        </View>
       </View>
        </View>
@@ -100,9 +131,17 @@ export default AccountDetailsscren
 
 const styles = StyleSheet.create({
   curvedView: {
-    marginTop:10,
+    // marginTop:10,
     width: 350,
     height: 100,
+    backgroundColor: 'white',
+    // marginLeft:10,
+    borderRadius: 5, // Adjust this value for the desired curve
+  },
+  curvedView2: {
+    // marginTop:10,
+    width: 350,
+    height: 60,
     backgroundColor: 'white',
     // marginLeft:10,
     borderRadius: 5, // Adjust this value for the desired curve

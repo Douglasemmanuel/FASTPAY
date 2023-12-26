@@ -17,6 +17,7 @@ import AccountDetailsscren from "../screen/AccountDetailsscren";
 import OtherAccountscreen from "../screen/OtherAccountscreen";
 import CardTransactionscreen from "../screen/CardTransactionscreen";
 import BankTransferscreen from "../screen/BankTransferscreen";
+import Historyscreen from "../screen/Historyscreen";
 const Stack = createStackNavigator()
 export default function Navigation(){
     const onboard = useSelector((state)=> state.onboard)
@@ -47,6 +48,7 @@ export default function Navigation(){
                 <Stack.Screen name='topup' component={OtherAccountscreen} />
                 <Stack.Screen  name='cardtransactions'  component={CardTransactionscreen}/>
                 <Stack.Screen name='banktransfer' component={BankTransferscreen} />
+                <Stack.Screen  name='history' component={Historyscreen}/>
                 </>
                 ):(
                     <>

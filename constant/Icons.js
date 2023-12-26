@@ -25,3 +25,4 @@
 <FontAwesomeIcon icon={faCheck} />
 <FontAwesomeIcon icon={faEllipsis} />
 <FontAwesomeIcon icon={faClipboard} />
+ <FontAwesomeIcon icon={faCircleChevronRight} />
