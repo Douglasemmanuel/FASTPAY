@@ -79,7 +79,7 @@ const FrontCard =()=>{
          />
  
          {/* Card Number */}
-         <Text style={styles.cardNumber}>1234 5678 9012 3456</Text>
+         {/* <Text style={styles.cardNumber}>1234 5678 9012 3456</Text> */}
  
          {/* Cardholder Name and Expiry */}
          <View style={styles.cardInfoContainer}>
@@ -117,9 +117,9 @@ const CardDetails=()=>{
       <View>
         <Text style={{ fontSize:18 , color:'black'}}>Card Name</Text>
         <View style={{flexDirection:'row' , rowGap:20}}>
-        <Text style={{fontWeight:'bold' , fontSize:18 , color:'black'}}>DOUGGIE</Text>
-        <TouchableOpacity >
-       <View style={styles.container1} ><FontAwesomeIcon icon={faClipboard} size={25} /></View>
+        <Text style={{fontWeight:70 , fontSize:18 , color:'black' , flex:1}}>DOUGGIE</Text>
+        <TouchableOpacity style={{flex:1}} >
+       <View style={styles.container4} ><FontAwesomeIcon icon={faClipboard} size={15} /></View>
         </TouchableOpacity>
         </View>
       </View>
@@ -128,7 +128,7 @@ const CardDetails=()=>{
         <View style={{flexDirection:'row'}}>
         <Text>510040*******9822</Text>
         <TouchableOpacity >
-       <View style={styles.container1} ><FontAwesomeIcon icon={faClipboard} size={25} /></View>
+       <View style={styles.container4} ><FontAwesomeIcon icon={faClipboard} size={15} /></View>
         </TouchableOpacity>
         </View>
       </View>
@@ -156,7 +156,7 @@ const showall =()=>{
       <View style={{flexDirection:'row'}}>
       <Text>510040*******9822</Text>
       <TouchableOpacity >
-     <View style={styles.container1} ><FontAwesomeIcon icon={faPlus} size={25} /></View>
+     <View style={styles.container1} ><FontAwesomeIcon icon={faPlus} size={15} /></View>
       </TouchableOpacity>
       </View>
     </View>
@@ -197,8 +197,41 @@ const styles = StyleSheet.create({
     width: 50,
     height: 50,
     marginLeft:5,
-   
-  
+  },
+  container3: {
+    backgroundColor: 'white',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+    padding: 5,
+    borderRadius: 50,
+    width: 70,
+    height: 25,
+    marginLeft:5,
+    justifyContent:'center',
+    alignItems:'center'
+    
+  },
+  container4: {
+    backgroundColor: 'white',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+    padding: 5,
+    borderRadius: 50,
+    width: 24,
+    height: 24,
+    marginLeft:5,
   },
   cardContainer: {
     alignItems: 'center',
@@ -266,8 +299,9 @@ const styles = StyleSheet.create({
   curvedView: {
     marginTop:10,
     width: 350,
-    height: 100,
+    height: 200,
     backgroundColor: 'white',
+    marginLeft:15,
     borderRadius: 20, // Adjust this value for the desired curve
   },
 })

@@ -20,10 +20,10 @@ const Bottomnavigation = () => {
     // activeTintColor
   
     barStyle={{ backgroundColor: 'white' }}
-    // tabBarOptions={{
-    //    activeTintColor:'blue',
-    //    inactiveTintColor:'gray',
-    // }}
+    tabBarOptions={{
+       activeTintColor:'blue',
+       inactiveTintColor:'gray',
+    }}
     // onTabLongPress={{backgroundColor:'white'}}
     ScreenOptions={{ headerShown: false }}
    >
