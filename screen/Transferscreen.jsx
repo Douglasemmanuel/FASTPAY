@@ -15,6 +15,12 @@ const Transferscreen = () => {
     // navigation.navigate('')
     console.log('hiii')
   }
+  function topup(){
+    navigation.navigate('topup')
+  }
+  function transfer(){
+    navigation.navigate('banktransfer')
+  }
   return (
     <SafeAreaView>
     <View>
@@ -22,7 +28,7 @@ const Transferscreen = () => {
       <Beneficiaries/>
     <View style={{marginTop:40}}>
     <View style={styles.curvedView}>
-      <TouchableOpacity style={{flexDirection:'row' , marginLeft:15 , marginTop:5 }}>
+      <TouchableOpacity style={{flexDirection:'row' , marginLeft:15 , marginTop:5 }} onPress={topup}>
        <View style={{flex:1}}>
        <View style={styles.container1}><FontAwesomeIcon icon={faPaperPlane} size={20} /></View>
        </View>
@@ -36,7 +42,7 @@ const Transferscreen = () => {
       </TouchableOpacity>
     </View>
     <View style={styles.curvedView}>
-      <TouchableOpacity style={{flexDirection:'row' , marginLeft:15 , marginTop:10 }}>
+      <TouchableOpacity style={{flexDirection:'row' , marginLeft:15 , marginTop:10 }} onPress={transfer}>
        <View style={{flex:1}}>
        <View style={styles.container1}><FontAwesomeIcon icon={faBuildingColumns} size={20} /></View>
        </View>

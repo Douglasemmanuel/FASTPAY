@@ -72,7 +72,7 @@ const FrontCard =()=>{
         <View style={styles.cardContainer} onPress={toggleComponent}>
        {/* Card Background */}
        <View style={styles.card}>
-         <View style={{flexDirection:'row'}}>
+         <View style={{flexDirection:'row' ,  marginTop:10}}>
            <Text style={{color:'white', fontWeight:'bold' , fontSize:16 , flex:7}}>FastPay</Text>
            <Text style={{color:'white', fontWeight:'bold' , fontSize:16 , flex:1}}>VISA</Text>
          </View>
@@ -90,7 +90,7 @@ const FrontCard =()=>{
          <View style={styles.cardInfoContainer}>
            <View>
            <Text style={styles.cardHolderName}> {'\u20A6'}50000.00</Text>
-           <Text style={{fontSize:16 , color:'grey'}}>Wallet Balance</Text>
+           <Text style={{fontSize:16 , color:'grey' , marginTop:2}}>Wallet Balance</Text>
            </View>
            {/* <Text style={styles.expiry}>Exp: 12/28</Text> */}
          </View>
@@ -128,7 +128,7 @@ const CardDetails=()=>{
     {isShown ?(
        <View style={styles.curvedView}>
        <Text style={{fontWeight:'bold' , fontSize:18 , marginLeft:15 ,marginTop:15}}>Your Card Details</Text>
-       <View style={{marginTop:10 , marginLeft:10}}>
+       <View style={{marginTop:10 , marginLeft:15}}>
          <Text style={{ fontSize:14 , color:'grey'}}>Card Name</Text>
          <View style={{flexDirection:'row' , rowGap:20 , marginTop:5}}>
          <Text style={{fontWeight:70 , fontSize:18 , color:'black' , flex:3}}>DOUGGIE</Text>
@@ -137,7 +137,7 @@ const CardDetails=()=>{
          </TouchableOpacity>
          </View>
        </View>
-       <View style={{marginTop:10 , marginLeft:10}}>
+       <View style={{marginTop:10 , marginLeft:15}}>
          <Text style={{ fontSize:14 , color:'grey'}} >Card Number</Text>
          <View style={{flexDirection:'row'}}>
          <Text style={{fontWeight:70 , fontSize:16 , color:'black' , flex:3}}>510040*******9822</Text>
@@ -166,7 +166,7 @@ const Showall =()=>{
       {isShown?(
           <View style={styles.curvedView2}>
           <Text style={{fontWeight:'bold' , fontSize:18 , marginLeft:15 ,marginTop:15}}>Your Card Details</Text>
-          <View style={{marginTop:10 , marginLeft:10}}>
+          <View style={{marginTop:10 , marginLeft:15}}>
             <Text  style={{ fontSize:14 , color:'grey'}}>Card Name</Text>
             <View style={{flexDirection:'row' , rowGap:20 , marginTop:5}}>
             <Text  style={{fontWeight:70 , fontSize:18 , color:'black' , flex:3}}>DOUGGIE</Text>
@@ -175,7 +175,7 @@ const Showall =()=>{
             </TouchableOpacity>
             </View>
           </View>
-          <View style={{marginTop:10 , marginLeft:10}}>
+          <View style={{marginTop:10 , marginLeft:15}}>
             <Text style={{ fontSize:14 , color:'grey'}}>Card Number</Text>
             <View style={{flexDirection:'row'}}>
             <Text style={{fontWeight:70 , fontSize:16 , color:'black' , flex:3}}>5100401005649822</Text>
@@ -184,7 +184,7 @@ const Showall =()=>{
             </TouchableOpacity>
             </View>
           </View>
-          <View style={{marginTop:10 , marginLeft:10}}>
+          <View style={{marginTop:10 , marginLeft:15}}>
             <Text style={{ fontSize:14 , color:'grey'}}>CV</Text>
             <View style={{flexDirection:'row'}}>
             <Text style={{fontWeight:70 , fontSize:16 , color:'black' , flex:3}}>123</Text>
@@ -193,7 +193,7 @@ const Showall =()=>{
             </TouchableOpacity>
             </View>
           </View> 
-          <View style={{marginTop:10 , marginLeft:10}}>
+          <View style={{marginTop:10 , marginLeft:15}}>
               <Text  style={{ fontSize:14 , color:'grey'}}>Expiry Date</Text>
               <View style={{flexDirection:'row'}}>
               <Text style={{fontWeight:70 , fontSize:16 , color:'black' , flex:3}}>12/26</Text>
@@ -284,7 +284,7 @@ const styles = StyleSheet.create({
     width: 60,
     height: 40,
     marginBottom: 10,
-    marginTop:10,
+    marginTop:12,
   },
   cardNumber: {
     color: 'white',
@@ -292,7 +292,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   cardInfoContainer: {
-    marginTop:20,
+    marginTop:10,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
