@@ -53,6 +53,7 @@ const Cardscreen = () => {
        </View>
         </View>
         <CardDetails/>
+        <Showall/>
     
     </SafeAreaView>
   )
@@ -64,7 +65,7 @@ const FrontCard =()=>{
   }
   return (
     <View>
-        <TouchableOpacity style={styles.cardContainer} onPress={toggleComponent}>
+        <View style={styles.cardContainer} onPress={toggleComponent}>
        {/* Card Background */}
        <View style={styles.card}>
          <View style={{flexDirection:'row'}}>
@@ -83,11 +84,14 @@ const FrontCard =()=>{
  
          {/* Cardholder Name and Expiry */}
          <View style={styles.cardInfoContainer}>
+           <View>
            <Text style={styles.cardHolderName}> {'\u20A6'}50000.00</Text>
-           <Text style={styles.expiry}>Exp: 12/28</Text>
+           <Text style={{fontSize:10 , color:'grey'}}>Wallet Balance</Text>
+           </View>
+           {/* <Text style={styles.expiry}>Exp: 12/28</Text> */}
          </View>
        </View>
-     </TouchableOpacity>
+     </View>
     </View>
   )
 }
@@ -113,55 +117,55 @@ const BackCard=()=>{
 const CardDetails=()=>{
   return (
     <View style={styles.curvedView}>
-      <Text style={{fontWeight:'bold' , fontSize:18}}>Your Card Details</Text>
-      <View style={{marginTop:15 , marginLeft:10}}>
-        <Text style={{ fontSize:15 , color:'grey'}}>Card Name</Text>
+      <Text style={{fontWeight:'bold' , fontSize:18 , marginLeft:15 ,marginTop:15}}>Your Card Details</Text>
+      <View style={{marginTop:10 , marginLeft:10}}>
+        <Text style={{ fontSize:14 , color:'grey'}}>Card Name</Text>
         <View style={{flexDirection:'row' , rowGap:20 , marginTop:5}}>
-        <Text style={{fontWeight:70 , fontSize:18 , color:'black' , flex:1}}>DOUGGIE</Text>
+        <Text style={{fontWeight:70 , fontSize:18 , color:'black' , flex:3}}>DOUGGIE</Text>
         <TouchableOpacity style={{flex:1}} >
        <View style={styles.container4} ><FontAwesomeIcon icon={faClipboard} size={15} /></View>
         </TouchableOpacity>
         </View>
       </View>
       <View style={{marginTop:10 , marginLeft:10}}>
-        <Text>Card Number</Text>
+        <Text style={{ fontSize:14 , color:'grey'}} >Card Number</Text>
         <View style={{flexDirection:'row'}}>
-        <Text>510040*******9822</Text>
-        <TouchableOpacity >
+        <Text style={{fontWeight:70 , fontSize:16 , color:'black' , flex:3}}>510040*******9822</Text>
+        <TouchableOpacity  style={{flex:1}}>
        <View style={styles.container4} ><FontAwesomeIcon icon={faClipboard} size={15} /></View>
         </TouchableOpacity>
         </View>
       </View>
-      <View style={styles.container3}>
-        <Text>Show all</Text>
-      </View>
+      <TouchableOpacity style={styles.container3}>
+        <Text style={{fontWeight:80 , fontSize:16 ,color:'black'}}>Show all</Text>
+      </TouchableOpacity>
     </View>
   )
 }
-const showall =()=>{
+const Showall =()=>{
   return (
     <View style={styles.curvedView}>
-    <Text>Your Card Details</Text>
+    <Text style={{fontWeight:'bold' , fontSize:18 , marginLeft:15 ,marginTop:15}}>Your Card Details</Text>
     <View>
-      <Text>Card Name</Text>
+      <Text  style={{ fontSize:14 , color:'grey'}}>Card Name</Text>
+      <View style={{flexDirection:'row' , rowGap:20 , marginTop:5}}>
+      <Text  style={{fontWeight:70 , fontSize:18 , color:'black' , flex:3}}>DOUGGIE</Text>
+      <TouchableOpacity style={{flex:1}} >
+     <View style={styles.container4} ><FontAwesomeIcon icon={faClipboard} size={15} /></View>
+      </TouchableOpacity>
+      </View>
+    </View>
+    <View style={{marginTop:10 , marginLeft:10}}>
+      <Text style={{ fontSize:14 , color:'grey'}}>Card Number</Text>
       <View style={{flexDirection:'row'}}>
-      <Text>DOUGGIE</Text>
+      <Text style={{fontWeight:70 , fontSize:16 , color:'black' , flex:3}}>510040*******9822</Text>
       <TouchableOpacity >
      <View style={styles.container4} ><FontAwesomeIcon icon={faClipboard} size={15} /></View>
       </TouchableOpacity>
       </View>
     </View>
-    <View>
-      <Text style={{color:'grey' , fontSize:16 , fontWeight:80}}>Card Number</Text>
-      <View style={{flexDirection:'row'}}>
-      <Text>510040*******9822</Text>
-      <TouchableOpacity >
-     <View style={styles.container4} ><FontAwesomeIcon icon={faClipboard} size={15} /></View>
-      </TouchableOpacity>
-      </View>
-    </View>
-    <View>
-      <Text>CV</Text>
+    <View style={{marginTop:10 , marginLeft:10}}>
+      <Text style={{ fontSize:14 , color:'grey'}}>CV</Text>
       <View style={{flexDirection:'row'}}>
       <Text>123</Text>
       <TouchableOpacity >
@@ -169,11 +173,13 @@ const showall =()=>{
       </TouchableOpacity>
       </View>
     </View> 
-    <View>
-        <Text>Expiry Date</Text>
+    <View style={{marginTop:10 , marginLeft:10}}>
+        <Text  style={{ fontSize:14 , color:'grey'}}>Expiry Date</Text>
         <View style={{flexDirection:'row'}}>
-        <Text>12/26</Text>
-       
+        <Text style={{fontWeight:70 , fontSize:16 , color:'black' , flex:3}}>12/26</Text>
+        <TouchableOpacity >
+     <View style={styles.container4} ><FontAwesomeIcon icon={faClipboard} size={15} /></View>
+      </TouchableOpacity>
         </View>
       </View> 
   </View>
@@ -210,9 +216,10 @@ const styles = StyleSheet.create({
     elevation: 5,
     padding: 5,
     borderRadius: 50,
-    width: 70,
-    height: 25,
-    marginLeft:5,
+    width: 80,
+    height: 35,
+    marginLeft:150,
+    marginTop:20,
     justifyContent:'center',
     alignItems:'center',
     textAlign:'center'
@@ -236,7 +243,7 @@ const styles = StyleSheet.create({
   },
   cardContainer: {
     alignItems: 'center',
-    marginTop: 50,
+    marginTop: 30,
   },
   card: {
     backgroundColor: 'black', // Card background color
@@ -299,8 +306,8 @@ const styles = StyleSheet.create({
   },
   curvedView: {
     marginTop:10,
-    width: 350,
-    height: 200,
+    width: 380,
+    height: 220,
     backgroundColor: 'white',
     marginLeft:15,
     borderRadius: 20, // Adjust this value for the desired curve
