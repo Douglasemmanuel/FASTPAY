@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import {faArrowLeft}  from "@fortawesome/free-solid-svg-icons/faArrowLeft"
 import {faClipboard}  from "@fortawesome/free-solid-svg-icons/faClipboard"
 import {faChevronRight}  from "@fortawesome/free-solid-svg-icons/faChevronRight"
-import {faWallet} from "@fortawesome/free-solid-svg-icons/faWallet"
+import {faCircleChevronRight} from "@fortawesome/free-solid-svg-icons/faCircleChevronRight"
 const AccountDetailsscren = () => {
   const navigation = useNavigation()
     useLayoutEffect(()=>{
@@ -63,8 +63,9 @@ const History=()=>{
   return (
     <View>
     <View style={{flexDirection:'row' , marginLeft:10}}>
-    <Text style={{fontWeight:'bold' , fontSize:20 , color:'black' , flex:3 }}>Account History</Text>
-    <TouchableOpacity style={{flex:1 , marginTop:5}}><Text style={{color:'grey' , fontSize:15}}>See more</Text><FontAwesomeIcon icon={faChevronRight} size={20}/></TouchableOpacity>
+    <Text style={{fontWeight:'bold' , fontSize:20 , color:'black' , flex:4}}>Account History</Text>
+    <Text style={{color:'grey' , fontSize:15 , flex:1 , marginTop:5}}>See more</Text>
+    <TouchableOpacity style={{flex:1 , marginTop:5}}><FontAwesomeIcon icon={faChevronRight} size={18}/></TouchableOpacity>
     </View>
       <View style={styles.curvedView}>
        <View style={{marginLeft:10 , marginTop:10}}>
@@ -72,16 +73,23 @@ const History=()=>{
        <Text style={{color:'grey' , flex:3 , fontSize:16}}>25 December 2023</Text>
        </View>
        <View style={{flexDirection:'row' , marginLeft:10, marginTop:10 }}>
-        <View style={styles.container1}><FontAwesomeIcon icon={faWallet} size={30} /></View>
+      <View style={{flex:1}}>
+      <View style={styles.container1}>
+      <FontAwesomeIcon icon={faCircleChevronRight} size={25}  color='red' />
+      </View>
+      </View>
         {/* <Text style={{fontWeight:'bold' , fontSize:20 }}>Fast Pay</Text> */}
-       <View style={{  marginLeft:15}}>
+       <View style={{flex:2.5}}>
        <Text style={{color:'black' ,fontSize:18 , marginTop:2}}>Doggie</Text>
         <Text style={{fontSize:12, color:'grey' , marginTop:5}}>Transfer</Text>
        </View>
         {/* <View style={{borderRadius:50 ,backgroundColor:'black' , width:50 , height:20  , marginLeft:100 }}>
         <Text style={{color:'white' , paddingTop:3 , fontWeight:'bold', fontSize:12 , paddingLeft:5}}>{'\u20A6'}0.00</Text>
         </View> */}
-        <Text  style={{color:'grey' , paddingTop:3 , fontSize:12 , paddingLeft:5}}> From .1823</Text>
+       <View style={{flex:2}}>
+        <Text style={{color:'red' , fontSize:16 , fontWeight:'bold'}}>1000.00</Text>
+       <Text  style={{color:'grey' , paddingTop:3 , fontSize:12 , paddingLeft:5}}> From .1823</Text>
+       </View>
       </View>
        </View>
       </View>
@@ -94,10 +102,10 @@ const styles = StyleSheet.create({
   curvedView: {
     marginTop:10,
     width: 350,
-    height: 120,
+    height: 100,
     backgroundColor: 'white',
-    marginLeft:10,
-    borderRadius: 10, // Adjust this value for the desired curve
+    // marginLeft:10,
+    borderRadius: 5, // Adjust this value for the desired curve
   },
   container1: {
     backgroundColor: 'white',
@@ -109,7 +117,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
-    padding: 9,
+    padding: 12,
     borderRadius: 35,
     height:50,
     width:50,
