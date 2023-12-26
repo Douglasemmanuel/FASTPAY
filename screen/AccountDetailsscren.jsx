@@ -10,6 +10,8 @@ import {faArrowLeft}  from "@fortawesome/free-solid-svg-icons/faArrowLeft"
 import {faClipboard}  from "@fortawesome/free-solid-svg-icons/faClipboard"
 import {faChevronRight}  from "@fortawesome/free-solid-svg-icons/faChevronRight"
 import {faCircleChevronRight} from "@fortawesome/free-solid-svg-icons/faCircleChevronRight"
+import {faCreditCard} from "@fortawesome/free-solid-svg-icons/faCreditCard"
+
 const AccountDetailsscren = () => {
   const navigation = useNavigation()
     useLayoutEffect(()=>{
@@ -111,16 +113,16 @@ const Card =()=>{
        <View style={{marginLeft:10 , marginTop:2}}>
        <View style={{flexDirection:'row' , marginLeft:10, marginTop:10 }}>
       <View style={{flex:1}}>
-     
+      <FontAwesomeIcon icon={faCreditCard} size={40}  />
       </View>
-       <View style={{flex:2.5}}>
-       <Text style={{color:'black' ,fontSize:18 , marginTop:2}}>Card</Text>
-        <Text style={{fontSize:12, color:'grey' , marginTop:5}}>Debit card</Text>
+       <View style={{flex:3}}>
+       <Text style={{color:'black' ,fontSize:18 , marginTop:1}}>Card</Text>
+        <Text style={{fontSize:12, color:'grey' , marginTop:0.4}}>Debit card</Text>
        </View>
       
-       <View style={{flex:2 , marginTop:15}}>
+       <TouchableOpacity onPress={move} style={{flex:1, marginTop:15}}>
        <FontAwesomeIcon icon={faChevronRight} size={15}  />
-       </View>
+       </TouchableOpacity>
       </View>
        </View>
       </View>
