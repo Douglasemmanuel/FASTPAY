@@ -83,7 +83,7 @@ const FrontCard =()=>{
  
          {/* Cardholder Name and Expiry */}
          <View style={styles.cardInfoContainer}>
-           <Text style={styles.cardHolderName}>Doggie</Text>
+           <Text style={styles.cardHolderName}> {'\u20A6'}50000.00</Text>
            <Text style={styles.expiry}>Exp: 12/28</Text>
          </View>
        </View>
@@ -228,7 +228,8 @@ const styles = StyleSheet.create({
   },
   cardHolderName: {
     color: 'white',
-    fontSize: 16,
+    fontSize: 20,
+    fontWeight:'bold',
   },
   expiry: {
     color: 'white',
