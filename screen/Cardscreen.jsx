@@ -114,16 +114,16 @@ const CardDetails=()=>{
   return (
     <View style={styles.curvedView}>
       <Text style={{fontWeight:'bold' , fontSize:18}}>Your Card Details</Text>
-      <View>
-        <Text style={{ fontSize:18 , color:'black'}}>Card Name</Text>
-        <View style={{flexDirection:'row' , rowGap:20}}>
+      <View style={{marginTop:15 , marginLeft:10}}>
+        <Text style={{ fontSize:15 , color:'grey'}}>Card Name</Text>
+        <View style={{flexDirection:'row' , rowGap:20 , marginTop:5}}>
         <Text style={{fontWeight:70 , fontSize:18 , color:'black' , flex:1}}>DOUGGIE</Text>
         <TouchableOpacity style={{flex:1}} >
        <View style={styles.container4} ><FontAwesomeIcon icon={faClipboard} size={15} /></View>
         </TouchableOpacity>
         </View>
       </View>
-      <View>
+      <View style={{marginTop:10 , marginLeft:10}}>
         <Text>Card Number</Text>
         <View style={{flexDirection:'row'}}>
         <Text>510040*******9822</Text>
@@ -147,7 +147,7 @@ const showall =()=>{
       <View style={{flexDirection:'row'}}>
       <Text>DOUGGIE</Text>
       <TouchableOpacity >
-     <View style={styles.container1} ><FontAwesomeIcon icon={faPlus} size={25} /></View>
+     <View style={styles.container4} ><FontAwesomeIcon icon={faClipboard} size={15} /></View>
       </TouchableOpacity>
       </View>
     </View>
@@ -156,7 +156,7 @@ const showall =()=>{
       <View style={{flexDirection:'row'}}>
       <Text>510040*******9822</Text>
       <TouchableOpacity >
-     <View style={styles.container1} ><FontAwesomeIcon icon={faPlus} size={15} /></View>
+     <View style={styles.container4} ><FontAwesomeIcon icon={faClipboard} size={15} /></View>
       </TouchableOpacity>
       </View>
     </View>
@@ -165,7 +165,7 @@ const showall =()=>{
       <View style={{flexDirection:'row'}}>
       <Text>123</Text>
       <TouchableOpacity >
-     <View style={styles.container1} ><FontAwesomeIcon icon={faPlus} size={25} /></View>
+     <View style={styles.container4} ><FontAwesomeIcon icon={faClipboard} size={15} /></View>
       </TouchableOpacity>
       </View>
     </View> 
@@ -214,7 +214,8 @@ const styles = StyleSheet.create({
     height: 25,
     marginLeft:5,
     justifyContent:'center',
-    alignItems:'center'
+    alignItems:'center',
+    textAlign:'center'
     
   },
   container4: {

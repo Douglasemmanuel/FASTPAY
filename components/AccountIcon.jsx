@@ -5,14 +5,23 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import {faPaperPlane} from "@fortawesome/free-solid-svg-icons/faPaperPlane"
 import {faBuildingColumns} from "@fortawesome/free-solid-svg-icons/faBuildingColumns"
 import {faPlus}  from "@fortawesome/free-solid-svg-icons/faPlus"
+import { useNavigation } from '@react-navigation/native'
 const AccountIcon = () => {
+  const navigation = useNavigation()
+    function move(){
+      navigation.navigate('accountdetails')
+    }
+    function top(){
+      navigation.navigate('topup')
+    }
   return (
+    
     <View style={styles.curvedView}>
-        <TouchableOpacity  >
+        <TouchableOpacity  onPress={move} >
       <View style={styles.container1} ><FontAwesomeIcon icon={faBuildingColumns} size={30}  /></View>
       <Text style={{marginTop:5}}>Account Details</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={{marginLeft:30}} >
+      <TouchableOpacity style={{marginLeft:30}} onPress={top} >
       <View style={styles.container1}><FontAwesomeIcon icon={faPlus} size={30} /></View>
       <Text style={{marginTop:5}} >Top up</Text>
       </TouchableOpacity>

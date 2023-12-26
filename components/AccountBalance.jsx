@@ -7,6 +7,7 @@ import {faEye} from "@fortawesome/free-solid-svg-icons/faEye"
 import {faEyeSlash} from "@fortawesome/free-solid-svg-icons/faEyeSlash"
 import {faPaperPlane} from "@fortawesome/free-solid-svg-icons/faPaperPlane"
 import {faBuildingColumns} from "@fortawesome/free-solid-svg-icons/faBuildingColumns"
+import { useNavigation } from '@react-navigation/native'
 const AccountBalance = () => {
     const [vissible , setVissible] = useState(true)
     const toggleComponent =()=>{
@@ -57,9 +58,10 @@ const Hide=()=>{
 }
 
 const Icon =()=>{
+
   return (
     <View style={{flexDirection:'row'}}>
-      <View style={styles.container1}><FontAwesomeIcon icon={faBuildingColumns} /></View>
+      <View style={styles.container1} ><FontAwesomeIcon icon={faBuildingColumns} /></View>
       <View style={styles.container1}><FontAwesomeIcon icon={faPaperPlane} /></View>
     </View>
   )

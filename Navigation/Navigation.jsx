@@ -13,6 +13,8 @@ import Entrypinscreen from "../screen/Entrypinscreen";
 import OtherScreeen from "../screen/OtherScreeen";
 import Cardscreen from "../screen/Cardscreen";
 import BeneficiariesScreen from "../screen/BeneficiariesScreen";
+import AccountDetailsscren from "../screen/AccountDetailsscren";
+import OtherAccountscreen from "../screen/OtherAccountscreen";
 const Stack = createStackNavigator()
 export default function Navigation(){
     const onboard = useSelector((state)=> state.onboard)
@@ -39,6 +41,8 @@ export default function Navigation(){
                 <Stack.Screen  name='transfer' component={Transferscreen}/>
                 <Stack.Screen name='other'  component={OtherScreeen}/>
                 <Stack.Screen  name='beneficiaries' component={BeneficiariesScreen}/>
+                <Stack.Screen name='accountdetails' component={AccountDetailsscren} />
+                <Stack.Screen name='topup' component={OtherAccountscreen} />
                 </>
                 ):(
                     <>
