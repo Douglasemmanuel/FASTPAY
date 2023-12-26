@@ -11,6 +11,8 @@ import {faPlus}  from "@fortawesome/free-solid-svg-icons/faPlus"
 import {faSnowflake}  from "@fortawesome/free-solid-svg-icons/faSnowflake"
 import {faEllipsis}  from "@fortawesome/free-solid-svg-icons/faEllipsis"
 import {faClipboard}  from "@fortawesome/free-solid-svg-icons/faClipboard"
+import { ScrollView } from 'react-native'
+import CardTransaction from '../components/CardTransaction'
 const Cardscreen = () => {
   const [isShown , setShow] = useState(true)
   const toggleComponent =()=>{
@@ -28,7 +30,8 @@ const Cardscreen = () => {
   },[])
   return (
     <SafeAreaView>
-      <Text style={{fontSize:30 , fontWeight:'bold' , marginLeft:15}}>Cards</Text>
+    <ScrollView vertical  alwaysBounceVertical   showsVerticalScrollIndicator={false}>
+    <Text style={{fontSize:30 , fontWeight:'bold' , marginLeft:15}}>Cards</Text>
      <View style={{marginTop:10}}>
      {isShown ? 
        <FrontCard/>
@@ -53,7 +56,8 @@ const Cardscreen = () => {
        </View>
         </View>
         <CardDetails/>
-        <Showall/>
+        <CardTransaction/>
+    </ScrollView>
     
     </SafeAreaView>
   )
@@ -86,7 +90,7 @@ const FrontCard =()=>{
          <View style={styles.cardInfoContainer}>
            <View>
            <Text style={styles.cardHolderName}> {'\u20A6'}50000.00</Text>
-           <Text style={{fontSize:10 , color:'grey'}}>Wallet Balance</Text>
+           <Text style={{fontSize:16 , color:'grey'}}>Wallet Balance</Text>
            </View>
            {/* <Text style={styles.expiry}>Exp: 12/28</Text> */}
          </View>
@@ -115,74 +119,98 @@ const BackCard=()=>{
   )
 }
 const CardDetails=()=>{
+  const [isShown , setShow] = useState(true)
+  const toggleComponent =()=>{
+    setShow(!isShown)
+  }
   return (
-    <View style={styles.curvedView}>
-      <Text style={{fontWeight:'bold' , fontSize:18 , marginLeft:15 ,marginTop:15}}>Your Card Details</Text>
-      <View style={{marginTop:10 , marginLeft:10}}>
-        <Text style={{ fontSize:14 , color:'grey'}}>Card Name</Text>
-        <View style={{flexDirection:'row' , rowGap:20 , marginTop:5}}>
-        <Text style={{fontWeight:70 , fontSize:18 , color:'black' , flex:3}}>DOUGGIE</Text>
-        <TouchableOpacity style={{flex:1}} >
-       <View style={styles.container4} ><FontAwesomeIcon icon={faClipboard} size={15} /></View>
-        </TouchableOpacity>
-        </View>
-      </View>
-      <View style={{marginTop:10 , marginLeft:10}}>
-        <Text style={{ fontSize:14 , color:'grey'}} >Card Number</Text>
-        <View style={{flexDirection:'row'}}>
-        <Text style={{fontWeight:70 , fontSize:16 , color:'black' , flex:3}}>510040*******9822</Text>
-        <TouchableOpacity  style={{flex:1}}>
-       <View style={styles.container4} ><FontAwesomeIcon icon={faClipboard} size={15} /></View>
-        </TouchableOpacity>
-        </View>
-      </View>
-      <TouchableOpacity style={styles.container3}>
-        <Text style={{fontWeight:80 , fontSize:16 ,color:'black'}}>Show all</Text>
-      </TouchableOpacity>
-    </View>
+   <View>
+    {isShown ?(
+       <View style={styles.curvedView}>
+       <Text style={{fontWeight:'bold' , fontSize:18 , marginLeft:15 ,marginTop:15}}>Your Card Details</Text>
+       <View style={{marginTop:10 , marginLeft:10}}>
+         <Text style={{ fontSize:14 , color:'grey'}}>Card Name</Text>
+         <View style={{flexDirection:'row' , rowGap:20 , marginTop:5}}>
+         <Text style={{fontWeight:70 , fontSize:18 , color:'black' , flex:3}}>DOUGGIE</Text>
+         <TouchableOpacity style={{flex:1}} >
+        <View style={styles.container4} ><FontAwesomeIcon icon={faClipboard} size={15} /></View>
+         </TouchableOpacity>
+         </View>
+       </View>
+       <View style={{marginTop:10 , marginLeft:10}}>
+         <Text style={{ fontSize:14 , color:'grey'}} >Card Number</Text>
+         <View style={{flexDirection:'row'}}>
+         <Text style={{fontWeight:70 , fontSize:16 , color:'black' , flex:3}}>510040*******9822</Text>
+         <TouchableOpacity  style={{flex:1}}>
+        <View style={styles.container4} ><FontAwesomeIcon icon={faClipboard} size={15} /></View>
+         </TouchableOpacity>
+         </View>
+       </View>
+       <TouchableOpacity style={styles.container3} onPress={toggleComponent}>
+         <Text style={{fontWeight:80 , fontSize:16 ,color:'black'}}>Show all</Text>
+       </TouchableOpacity>
+     </View>
+    ):(
+      <Showall/>
+    )}
+   </View>
   )
 }
 const Showall =()=>{
+  const [isShown , setShow] = useState(true)
+  const toggleComponent =()=>{
+    setShow(!isShown)
+  }
   return (
-    <View style={styles.curvedView}>
-    <Text style={{fontWeight:'bold' , fontSize:18 , marginLeft:15 ,marginTop:15}}>Your Card Details</Text>
     <View>
-      <Text  style={{ fontSize:14 , color:'grey'}}>Card Name</Text>
-      <View style={{flexDirection:'row' , rowGap:20 , marginTop:5}}>
-      <Text  style={{fontWeight:70 , fontSize:18 , color:'black' , flex:3}}>DOUGGIE</Text>
-      <TouchableOpacity style={{flex:1}} >
-     <View style={styles.container4} ><FontAwesomeIcon icon={faClipboard} size={15} /></View>
-      </TouchableOpacity>
-      </View>
-    </View>
-    <View style={{marginTop:10 , marginLeft:10}}>
-      <Text style={{ fontSize:14 , color:'grey'}}>Card Number</Text>
-      <View style={{flexDirection:'row'}}>
-      <Text style={{fontWeight:70 , fontSize:16 , color:'black' , flex:3}}>510040*******9822</Text>
-      <TouchableOpacity >
-     <View style={styles.container4} ><FontAwesomeIcon icon={faClipboard} size={15} /></View>
-      </TouchableOpacity>
-      </View>
-    </View>
-    <View style={{marginTop:10 , marginLeft:10}}>
-      <Text style={{ fontSize:14 , color:'grey'}}>CV</Text>
-      <View style={{flexDirection:'row'}}>
-      <Text>123</Text>
-      <TouchableOpacity >
-     <View style={styles.container4} ><FontAwesomeIcon icon={faClipboard} size={15} /></View>
-      </TouchableOpacity>
-      </View>
-    </View> 
-    <View style={{marginTop:10 , marginLeft:10}}>
-        <Text  style={{ fontSize:14 , color:'grey'}}>Expiry Date</Text>
-        <View style={{flexDirection:'row'}}>
-        <Text style={{fontWeight:70 , fontSize:16 , color:'black' , flex:3}}>12/26</Text>
-        <TouchableOpacity >
-     <View style={styles.container4} ><FontAwesomeIcon icon={faClipboard} size={15} /></View>
-      </TouchableOpacity>
+      {isShown?(
+          <View style={styles.curvedView2}>
+          <Text style={{fontWeight:'bold' , fontSize:18 , marginLeft:15 ,marginTop:15}}>Your Card Details</Text>
+          <View style={{marginTop:10 , marginLeft:10}}>
+            <Text  style={{ fontSize:14 , color:'grey'}}>Card Name</Text>
+            <View style={{flexDirection:'row' , rowGap:20 , marginTop:5}}>
+            <Text  style={{fontWeight:70 , fontSize:18 , color:'black' , flex:3}}>DOUGGIE</Text>
+            <TouchableOpacity style={{flex:1}} >
+           <View style={styles.container4} ><FontAwesomeIcon icon={faClipboard} size={15} /></View>
+            </TouchableOpacity>
+            </View>
+          </View>
+          <View style={{marginTop:10 , marginLeft:10}}>
+            <Text style={{ fontSize:14 , color:'grey'}}>Card Number</Text>
+            <View style={{flexDirection:'row'}}>
+            <Text style={{fontWeight:70 , fontSize:16 , color:'black' , flex:3}}>5100401005649822</Text>
+            <TouchableOpacity  style={{flex:1}}>
+           <View style={styles.container4} ><FontAwesomeIcon icon={faClipboard} size={15} /></View>
+            </TouchableOpacity>
+            </View>
+          </View>
+          <View style={{marginTop:10 , marginLeft:10}}>
+            <Text style={{ fontSize:14 , color:'grey'}}>CV</Text>
+            <View style={{flexDirection:'row'}}>
+            <Text style={{fontWeight:70 , fontSize:16 , color:'black' , flex:3}}>123</Text>
+            <TouchableOpacity  style={{flex:1}}>
+           <View style={styles.container4} ><FontAwesomeIcon icon={faClipboard} size={15} /></View>
+            </TouchableOpacity>
+            </View>
+          </View> 
+          <View style={{marginTop:10 , marginLeft:10}}>
+              <Text  style={{ fontSize:14 , color:'grey'}}>Expiry Date</Text>
+              <View style={{flexDirection:'row'}}>
+              <Text style={{fontWeight:70 , fontSize:16 , color:'black' , flex:3}}>12/26</Text>
+              <TouchableOpacity style={{flex:1}} >
+           <View style={styles.container4} ><FontAwesomeIcon icon={faClipboard} size={15} /></View>
+            </TouchableOpacity>
+              </View>
+            </View> 
+            <TouchableOpacity style={styles.container3} onPress={toggleComponent}>
+              <Text style={{fontWeight:80 , fontSize:16 ,color:'black'}}>Hide</Text>
+            </TouchableOpacity>
         </View>
-      </View> 
-  </View>
+      ):(
+        <CardDetails/>
+      )}
+    </View>
+  
   )
 }
 export default Cardscreen
@@ -264,12 +292,13 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   cardInfoContainer: {
+    marginTop:20,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
   cardHolderName: {
     color: 'white',
-    fontSize: 20,
+    fontSize: 30,
     fontWeight:'bold',
   },
   expiry: {
@@ -312,4 +341,13 @@ const styles = StyleSheet.create({
     marginLeft:15,
     borderRadius: 20, // Adjust this value for the desired curve
   },
+  curvedView2: {
+    marginTop:10,
+    width: 380,
+    height: 320,
+    backgroundColor: 'white',
+    marginLeft:15,
+    borderRadius: 20, // Adjust this value for the desired curve
+  },
+
 })
