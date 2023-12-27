@@ -21,6 +21,7 @@ import Historyscreen from "../screen/Historyscreen";
 import Profilescreen from "../screen/Profilescreen";
 import Airtimescreen from "../screen/Airtimescreen";
 import Electricityscreen from '../screen/Electricityscreen'
+import Amountscreen from "../screen/Amountscreen";
 const Stack = createStackNavigator()
 export default function Navigation(){
     const onboard = useSelector((state)=> state.onboard)
@@ -55,6 +56,7 @@ export default function Navigation(){
                 <Stack.Screen name='profile' component={Profilescreen} />
                 <Stack.Screen  name='airtime' component={Airtimescreen}/>
                 <Stack.Screen  name='electricity' component={Electricityscreen}/>
+                <Stack.Screen name='amount' component={Amountscreen} />
                 </>
                 ):(
                     <>

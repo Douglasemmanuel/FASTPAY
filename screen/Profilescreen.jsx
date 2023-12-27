@@ -70,7 +70,7 @@ const Security=()=>{
     </TouchableOpacity>
     <TouchableOpacity style={{ marginTop:20}} >
       <View style={{flexDirection:'row' , marginLeft:20 }}>
-      <View style={{flex:1}}><FontAwesomeIcon icon={faLock}  size={20}/></View>
+      <View style={{flex:1}}><FontAwesomeIcon icon={faKey}  size={20}/></View>
       <Text style={{flex:5}}>Change Transaction PIN</Text>
       <View style={{flex:1}}><FontAwesomeIcon icon={faChevronRight} /></View>
       </View>

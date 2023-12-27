@@ -10,6 +10,7 @@ import { TextInput } from 'react-native'
 import { KeyboardAvoidingView } from 'react-native'
 import { Keyboard } from 'react-native'
 import { TouchableWithoutFeedback } from 'react-native'
+import { Image } from 'react-native'
 const OtherAccountscreen = () => {
   const navigation = useNavigation()
   useLayoutEffect(()=>{
@@ -19,6 +20,9 @@ const OtherAccountscreen = () => {
 },[])
 function move(){
   navigation.goBack()
+}
+function transfer(){
+  navigation.navigate('amount')
 }
   return (
    <SafeAreaView style={{flex:1}}>
@@ -34,14 +38,27 @@ function move(){
       <Text style={{fontWeight:'bold' , fontSize:20}}>Fast pay Account transfer</Text>
       <Text style={{marginTop:10}}>Enter the receiver's details to make an instant transfer.</Text>
       </View>
-      <View style={styles.curvedView}>
+      <View style={styles.curvedView1}>
       
         <Text style={{color:'grey' , fontSize:12 ,  marginTop:6 , marginLeft:5}}>Account number..</Text>
         <TextInput style={{ marginLeft:20}}/>
       </View>
-      <View style={{marginTop:10}}>
-        <Text>Existing Bank</Text>
-      </View>
+      <View style={{marginTop:100}}>
+       <Text>Existing Bank</Text>
+       <View style={styles.curvedView}>
+        <TouchableOpacity onPress={transfer}>
+          <View style={{flexDirection:'row' , marginTop:15}}>
+          <View style={{flex:1  , marginTop:-12 }}>
+            <Image style={{ borderRadius: 50,width:50 , height:50 }} source={require('../images/mansmile.jpg')}/>
+            {/* <View style={styles.container1}>
+            </View> */}
+          </View>
+          <Text style={{flex:4}}>Access Bank</Text>
+          <View style={{flex:1}}><FontAwesomeIcon icon={faChevronRight} /></View>
+          </View>
+        </TouchableOpacity>
+        </View>
+     </View>
     </View>
     </TouchableWithoutFeedback>
      </KeyboardAvoidingView>
@@ -61,4 +78,36 @@ const styles = StyleSheet.create({
     // marginLeft:10,
     borderRadius: 5, // Adjust this value for the desired curve
   },
+  curvedView1: {
+    backgroundColor: 'white',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowOpacity: 0.05,
+    shadowRadius: 3.84,
+    elevation: 5,
+    // padding: 12,
+    marginTop:10,
+    // marginBottom:30,
+    width: 380,
+    height: 55,
+    // backgroundColor: 'white',
+    // marginLeft:10,
+    borderRadius: 5, // Adjust this value for the desired curve
+  },
+  container1: {
+    backgroundColor: 'white',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+    padding: 7,
+    borderRadius: 35,
+},
 })

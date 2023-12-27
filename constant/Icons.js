@@ -35,3 +35,4 @@
  <FontAwesomeIcon icon={faUser} />
  <FontAwesomeIcon icon={faMobileScreen} />
  <FontAwesomeIcon icon={faUsersViewfinder} />
+ <FontAwesomeIcon icon={faFingerprint} />
