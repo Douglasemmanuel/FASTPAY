@@ -6,6 +6,7 @@ import { SafeAreaView } from 'react-native'
 import { useLayoutEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import {faArrowLeft}  from "@fortawesome/free-solid-svg-icons/faArrowLeft"
+import {faChevronRight}  from "@fortawesome/free-solid-svg-icons/faChevronRight"
 import { TextInput } from 'react-native'
 import { KeyboardAvoidingView } from 'react-native'
 import { Keyboard } from 'react-native'
@@ -44,16 +45,14 @@ function transfer(){
         <TextInput style={{ marginLeft:20}}/>
       </View>
       <View style={{marginTop:100}}>
-       <Text>Existing Bank</Text>
+       <Text>Existing Fastpay User</Text>
        <View style={styles.curvedView}>
         <TouchableOpacity onPress={transfer}>
           <View style={{flexDirection:'row' , marginTop:15}}>
           <View style={{flex:1  , marginTop:-12 }}>
             <Image style={{ borderRadius: 50,width:50 , height:50 }} source={require('../images/mansmile.jpg')}/>
-            {/* <View style={styles.container1}>
-            </View> */}
           </View>
-          <Text style={{flex:4}}>Access Bank</Text>
+          <Text style={{flex:4}}>Doggie</Text>
           <View style={{flex:1}}><FontAwesomeIcon icon={faChevronRight} /></View>
           </View>
         </TouchableOpacity>
@@ -74,7 +73,7 @@ const styles = StyleSheet.create({
     // marginBottom:30,
     width: 380,
     height: 50,
-    backgroundColor: 'white',
+    // backgroundColor: 'white',
     // marginLeft:10,
     borderRadius: 5, // Adjust this value for the desired curve
   },
