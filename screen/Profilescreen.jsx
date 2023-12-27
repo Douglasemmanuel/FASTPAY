@@ -3,7 +3,7 @@ import React from 'react'
 import { SafeAreaView } from 'react-native'
 import { useLayoutEffect } from 'react'
 import { useNavigation } from '@react-navigation/native'
-import { TouchableOpacity } from 'react-native'
+import { TouchableOpacity  , TouchableWithoutFeedback} from 'react-native'
 import UserImage from '../components/UserImage'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import {faKey}  from "@fortawesome/free-solid-svg-icons/faKey"
@@ -32,7 +32,7 @@ function move(){
     <SafeAreaView>
     <View style={{marginLeft:15}}>
     <View style={{flexDirection:'row'}} onPress={move}>
-            <TouchableOpacity style={{marginTop:5  , marginLeft:15}} onPress={move}>
+            <TouchableOpacity style={{marginTop:5  }} onPress={move}>
             <FontAwesomeIcon icon={faArrowLeft} size={20}  />
             </TouchableOpacity>
       </View>
@@ -48,7 +48,7 @@ function move(){
 const Head =()=>{
   return(
     <View style={{flexDirection:'row' }}>
-      <Text style={{flex:1 , fontWeight:'bold' , fontSize:18}}>Hello , Doggie</Text>
+      <Text style={{flex:3 , fontWeight:'bold' , fontSize:28 , marginTop:5}}>Hello , Doggie</Text>
       <View style={{flex:1}}><UserImage/></View>
     </View>
   )
@@ -56,6 +56,7 @@ const Head =()=>{
 const Security=()=>{
   return (
     <View style={{marginTop:20}}>
+    <Text style={{ color:'grey' , fontSize:15}}>SECURITY</Text>
     <View style={styles.curvedView2}>
     <TouchableOpacity style={{ marginTop:15}} >
       <View style={{flexDirection:'row' , marginLeft:20 }}>
@@ -94,32 +95,43 @@ const Security=()=>{
 }
 const Personal=()=>{
   return (
-    <View>
+    <View style={{marginTop:20}}>
+      <Text style={{ color:'grey' , fontSize:15}}>ACCOUNT</Text>
         <View style={styles.curvedView1}>
-        <TouchableOpacity>
+        <TouchableWithoutFeedback>
           <View style={{flexDirection:'row' , marginLeft:20 , marginTop:15}}>
           <View style={{flex:1}}><FontAwesomeIcon icon={faUser}  size={20}/></View>
-          <Text style={{flex:5}}>Doggie</Text>
+         <View style={{flex:5}}>
+         <Text >Doggie</Text>
+         <Text style={{color:'grey' , fontSize:12}} >Full name</Text>
+         </View>
           {/* <View style={{flex:1}}><FontAwesomeIcon icon={faChevronRight} /></View> */}
           </View>
-        </TouchableOpacity>
-        <TouchableOpacity>
+        </TouchableWithoutFeedback>
+        <TouchableWithoutFeedback>
           <View style={{flexDirection:'row' , marginLeft:20 , marginTop:15}}>
           <View style={{flex:1}}><FontAwesomeIcon icon={faMobileScreen}  size={20}/></View>
           <Text style={{flex:5}}>+23490101001001</Text>
           {/* <View style={{flex:1}}><FontAwesomeIcon icon={faChevronRight} /></View> */}
           </View>
-        </TouchableOpacity>
-        <TouchableOpacity>
+        </TouchableWithoutFeedback>
+        <TouchableWithoutFeedback>
           <View style={{flexDirection:'row' , marginLeft:20 , marginTop:15}}>
           <View style={{flex:1}}><FontAwesomeIcon icon={faEnvelope}  size={20}/></View>
           <View style={{flex:5}}>
           <Text >d*******@gmail.com</Text>
           <Text style={{color:'grey' , fontSize:12}}>E-mail</Text>
           </View>
-          <View style={{flex:1}}><FontAwesomeIcon icon={faChevronRight} /></View>
+          {/* <View style={{flex:1}}><FontAwesomeIcon icon={faChevronRight} /></View> */}
           </View>
-        </TouchableOpacity>
+        </TouchableWithoutFeedback>
+        <TouchableWithoutFeedback>
+          <View style={{flexDirection:'row' , marginLeft:20 , marginTop:15}}>
+          <View style={{flex:1}}><FontAwesomeIcon icon={faUser}  size={20}/></View>
+          <Text style={{flex:5}}>Account Verificaion</Text>
+          <View style={{flex:1.5}}><Text style={{color:'green'}}>Verified</Text></View>
+          </View>
+        </TouchableWithoutFeedback>
         </View>
     </View>
   )
@@ -152,7 +164,7 @@ const styles = StyleSheet.create({
     borderRadius: 5, // Adjust this value for the desired curve
   },
   curvedView1: {
-    // marginTop:10,
+    marginTop:6,
     // marginBottom:30,
     width: 380,
     height: 200,
@@ -161,7 +173,7 @@ const styles = StyleSheet.create({
     borderRadius: 5, // Adjust this value for the desired curve
   },
   curvedView2: {
-    // marginTop:10,
+    marginTop:6,
     // marginBottom:30,
     width: 380,
     height: 200,
