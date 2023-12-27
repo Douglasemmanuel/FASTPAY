@@ -34,3 +34,4 @@
  <FontAwesomeIcon icon={faEnvelope} />
  <FontAwesomeIcon icon={faUser} />
  <FontAwesomeIcon icon={faMobileScreen} />
+ <FontAwesomeIcon icon={faUsersViewfinder} />
