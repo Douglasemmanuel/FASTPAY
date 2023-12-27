@@ -13,6 +13,15 @@ const HomeIcons = () => {
     function move(){
       navigation.navigate('other')
     }
+    function transfer(){
+      navigation.navigate('transfer')
+    }
+    function airtime(){
+      navigation.navigate('airtime')
+    }
+    function electricity(){
+      navigation.navigate('airtime')
+    }
   return (
     <View style={{marginLeft:15 , marginTop:16}}>
       <View style={{flexDirection:'row'}}>
@@ -22,11 +31,11 @@ const HomeIcons = () => {
       </TouchableOpacity>
       </View>
       <View style={styles.curvedView}>
-        <TouchableOpacity  style={{flex:1}} >
+        <TouchableOpacity  style={{flex:1}}  onPress={transfer}>
       <View style={styles.container1} ><FontAwesomeIcon icon={faPaperPlane} size={18}  /></View>
       <Text  style={styles.text}>BankTransfer</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={{flex:1}}>
+      <TouchableOpacity style={{flex:1}} onPress={airtime}>
       <View style={styles.container1}><FontAwesomeIcon icon={faPhoneVolume} size={18} /></View>
       <Text style={styles.text} >Airtime</Text>
       </TouchableOpacity>
@@ -34,7 +43,7 @@ const HomeIcons = () => {
       <View style={styles.container1}><FontAwesomeIcon icon={faPlaneUp} size={18} /></View>
       <Text style={styles.text} >Flight</Text>
       </TouchableOpacity>
-       <TouchableOpacity style={{flex:1}}>
+       <TouchableOpacity style={{flex:1}} onPress={electricity}>
       <View style={styles.container1}><FontAwesomeIcon icon={faPlugCircleBolt} size={20} /></View>
       <Text style={styles.text} >Electricity</Text>
       </TouchableOpacity>

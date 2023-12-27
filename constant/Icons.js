@@ -31,3 +31,6 @@
  <FontAwesomeIcon icon={faArrowRightFromBracket} />
  <FontAwesomeIcon icon={faKey} />
  <FontAwesomeIcon icon={faShield} />
+ <FontAwesomeIcon icon={faEnvelope} />
+ <FontAwesomeIcon icon={faUser} />
+ <FontAwesomeIcon icon={faMobileScreen} />
