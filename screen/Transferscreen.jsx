@@ -9,8 +9,14 @@ import {faPlus}  from "@fortawesome/free-solid-svg-icons/faPlus"
 import {faChevronRight}  from "@fortawesome/free-solid-svg-icons/faChevronRight"
 import { useNavigation } from '@react-navigation/native'
 import { TouchableOpacity } from 'react-native'
+import { useLayoutEffect } from 'react'
 const Transferscreen = () => {
-  const navigation = useNavigation()
+const navigation = useNavigation()
+  useLayoutEffect(()=>{
+    navigation.setOptions({
+        headerShown:false
+    })
+},[])
   function move(){
     // navigation.navigate('')
     console.log('hiii')

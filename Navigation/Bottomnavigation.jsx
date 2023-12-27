@@ -41,7 +41,7 @@ const Bottomnavigation = () => {
         ),
       }}
       />
-       <Tab.Screen 
+       {/* <Tab.Screen 
       name="transfer" 
       // options={{ headerShown: false }}
       component={Transferscreen}
@@ -54,7 +54,7 @@ const Bottomnavigation = () => {
         tabBarColor:"#FF4433",
         headerShown: false
       }}
-      />
+      /> */}
         <Tab.Screen 
       name="card" 
       // options={{ headerShown: false }}
