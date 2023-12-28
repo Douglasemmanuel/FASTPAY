@@ -27,6 +27,7 @@
     "react": "18.2.0",
     "react-native": "0.72.6",
     "react-native-gesture-handler": "~2.12.0",
+    "react-native-ionicons": "^4.6.5",
     "react-native-keychain": "^5.0.1",
     "react-native-onboarding-swiper": "^1.2.0",
     "react-native-otp-inputs": "^7.4.0",
