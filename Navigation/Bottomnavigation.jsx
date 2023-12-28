@@ -6,8 +6,9 @@ import Historyscreen from '../screen/Historyscreen'
 import Profilescreen from '../screen/Profilescreen'
 import Cardscreen from '../screen/Cardscreen'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import Ionicons from 'react-native-vector-icons/Ionicons'
+// import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+// import Ionicons from 'react-native-vector-icons/Ionicons'
+import Ionicons from "@expo/vector-icons/Ionicons"
 
 const homeName = "Home";
 const cardName = "Card";
@@ -68,8 +69,8 @@ const Bottomnavigation = () => {
   //       //   <MaterialCommunityIcons name="home" color={color} size={size} />
   //       // ),
   //       tabBarIcon: ({ color , size }) => (
-  //         <MaterialCommunityIcons name="home" color={color} size={26} />
-  //         // <Icon name="home" color={color} size={26} />
+  //         // <MaterialCommunityIcons name="home" color={color} size={26} />
+  //         <Ionicons    name="home" color={color} size={26} />
   //       ),
   //     }}
   //     />
@@ -81,8 +82,8 @@ const Bottomnavigation = () => {
   //     options={{
   //       tabBarLabel: 'Card',
   //       tabBarIcon: ({ color  }) => (
-  //         <MaterialCommunityIcons name="account" color={color} size={26} />
-  //         // <Icon name="person" color={color} size={26} />
+  //         // <MaterialCommunityIcons name="account" color={color} size={26} />
+  //         <Ionicons name="person" color={color} size={26} />
   //       ),
   //       tabBarColor:"#FF4433"
   //       // headerShown: false
@@ -94,8 +95,8 @@ const Bottomnavigation = () => {
   //     options={{
   //       tabBarLabel: 'History',
   //       tabBarIcon: ({ color }) => (
-  //         <MaterialCommunityIcons name="help-box" color={color} size={26} />
-  //         //  <Icon name="help" color={color} size={26} />
+  //         // <MaterialCommunityIcons name="help-box" color={color} size={26} />
+  //          <Ionicons name="help" color={color} size={26} />
   //       ),
   //       tabBarColor:"#FF4433"
   //     }}
@@ -107,8 +108,8 @@ const Bottomnavigation = () => {
   //     options={{
   //       tabBarLabel: 'Profile',
   //       tabBarIcon: ({ color  }) => (
-  //         <MaterialCommunityIcons name="account" color={color} size={26} />
-  //         // <Icon name="person" color={color} size={26} />
+  //         // <MaterialCommunityIcons name="account" color={color} size={26} />
+  //         <Ionicons name="person" color={color} size={26} />
   //       ),
   //       tabBarColor:"#FF4433"
   //       // headerShown: false
