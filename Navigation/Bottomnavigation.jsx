@@ -9,6 +9,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 // import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 // import Ionicons from 'react-native-vector-icons/Ionicons'
 import Ionicons from "@expo/vector-icons/Ionicons"
+import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons'
 
 const homeName = "Home";
 const cardName = "Card";
@@ -24,7 +25,8 @@ const Bottomnavigation = () => {
         let iconName;
         let rn = route.name;
         if (rn === homeName){
-          iconName = focused ? 'home' :'home-outline';
+          // iconName = focused ? 'home' :'home-outline';
+          iconName = focused ? 'ios-list-box' :'ios-list';
         }else if(rn === cardName){
           iconName = focused ? 'card' :'card-outline';
         }else if(rn === profileName){
@@ -96,7 +98,7 @@ const Bottomnavigation = () => {
   //       tabBarLabel: 'History',
   //       tabBarIcon: ({ color }) => (
   //         // <MaterialCommunityIcons name="help-box" color={color} size={26} />
-  //          <Ionicons name="help" color={color} size={26} />
+  //          <Ionicons name="add" color={color} size={26} />
   //       ),
   //       tabBarColor:"#FF4433"
   //     }}

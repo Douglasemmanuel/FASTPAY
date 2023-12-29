@@ -3,8 +3,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import store from './store';
 import { Provider } from 'react-redux';
 import Navigation from './Navigation/Navigation';
-import * as Font from 'expo-font'
-import { useEffect } from 'react';
+// import * as Font from 'expo-font'
+// import { useEffect } from 'react';
 export default function App() {
   // useEffect(() => {
   //   // Load Google Font
@@ -22,8 +22,7 @@ export default function App() {
   // useEffect(() => {
   //   const loadFonts = async () => {
   //     await Font.loadAsync({
-  //       Roboto: require('native-base/Fonts/Roboto.ttf'),
-  //       'Roboto-Bold': require('native-base/Fonts/Roboto_bold.ttf'),
+  //      'material-community':require('@expo/vector-icons/build/vendor/react-native-vector-icons/MaterialCommunityIcons.ttf')
   //     });
   //   };
 
@@ -32,10 +31,7 @@ export default function App() {
   return (
     <Provider store={store}>
       <Navigation/>
-    {/* <View style={styles.container}>
-      <Text>Open up App.js to start working on your app fans!</Text>
-      <StatusBar style="auto" />
-    </View> */}
+   
     </Provider>
   );
 }
