@@ -20,7 +20,7 @@ const HomeIcons = () => {
       navigation.navigate('airtime')
     }
     function electricity(){
-      navigation.navigate('airtime')
+      navigation.navigate('electricity')
     }
   return (
     <View style={{marginLeft:15 , marginTop:16}}>

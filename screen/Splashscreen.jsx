@@ -61,14 +61,15 @@ const Splashscreen = () => {
   }
   return (
     <SafeAreaView>
-    <View>
+    <View style={{backgroundColor:'black'}}>
       <Animated.Text
       style={{
         transform:[{translateY}],
         fontSize:30,
         textAlign:'center',
-        marginTop:300,
+        marginTop:200,
         fontWeight:'bold',
+        color:'white',
       }}
       >
        {/* <View><FontAwesomeIcon icon={faWallet} /></View> */}
